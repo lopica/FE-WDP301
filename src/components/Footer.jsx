@@ -47,7 +47,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-8 flex justify-center md:justify-between items-center">
-          <p className="text-gray-600 text-sm">© 2024 HolaWear. All rights reserved</p>
+          <p className="text-gray-600 text-sm">© 2024 HolaWear. All rights reserved Checking</p>
         </div>
       </div>
     </footer>
