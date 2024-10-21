@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const SaleBanner = () => {
   return (
@@ -7,9 +8,9 @@ const SaleBanner = () => {
         <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">Get 25% off during our one-time sale</h2>
         <p className="mt-4 text-lg text-gray-500">Most of our products are limited releases that won’t come back. Get your favorite items while they’re in stock.</p>
         <div className="mt-8">
-          <a href="#" className="inline-block bg-gray-900 border border-transparent rounded-md py-3 px-8 text-base font-medium text-white hover:bg-gray-700">
+          <Link to="/all-category" href="#" className="inline-block bg-gray-900 border border-transparent rounded-md py-3 px-8 text-base font-medium text-white hover:bg-gray-700">
             Buy Now !!
-          </a>
+          </Link>
         </div>
       </div>
     </div>
