@@ -66,7 +66,7 @@ const ProductDetail = () => {
       setCurrentImage(colorDetail.imageLink);
       setShowSlider(false); // Hide slider if specific image exists for the color abc
     } else {
-      setShowSlider(true); // Show slider if no specific image exists for the color
+      setShowSlider(true); // Show slider if no specific image exists for the color abcc
     }
   };
 
