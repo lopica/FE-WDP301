@@ -59,7 +59,7 @@ const Banner = () => {
           </div>
         </Slider>
         {/* Nếu bạn muốn sử dụng một hình ảnh đơn lẻ, bỏ chú thích dòng sau và chú thích phần Slider */}
-        {/* <img src={bannerImage} alt="Banner" className="w-full h-auto object-cover" /> */}
+        {/* <img src={bannerImage} alt="Banner" className="w-full h-auto object-cover" test../> */}
       </div>
     </div>
   );
