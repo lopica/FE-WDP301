@@ -1,0 +1,1274 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Adidas Running Shoes",
+      "description": "High-quality running shoes for men with excellent comfort and durability.",
+      "category": "men",
+      "price": 59.99,
+      "discountPercentage": 10,
+      "rating": 4.5,
+      "stock": 20,
+      "type": "Shoes",
+      "tags": ["shoes", "running", "adidas"],
+      "brand": "Adidas",
+      "sku": "AD12345",
+      "weight": 1.2,
+      "dimensions": {
+        "width": 10.5,
+        "height": 4,
+        "depth": 13
+      },
+      "warrantyInformation": "6 months warranty",
+      "shippingInformation": "Ships within 3-5 business days",
+      "availabilityStatus": "In Stock",
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Great shoes! Very comfortable.",
+          "date": "2024-05-23T08:56:21.618Z",
+          "reviewerName": "John Smith",
+          "reviewerEmail": "john.smith@example.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Good quality, but a bit pricey.",
+          "date": "2024-05-23T08:56:21.618Z",
+          "reviewerName": "Jane Doe",
+          "reviewerEmail": "jane.doe@example.com"
+        }
+      ],
+      "returnPolicy": "30 days return policy",
+      "minimumOrderQuantity": 1,
+      "meta": {
+        "createdAt": "2024-05-23T08:56:21.618Z",
+        "updatedAt": "2024-05-23T08:56:21.618Z",
+        "barcode": "1234567890123",
+        "qrCode": ""
+      },
+      "images": ["https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lvi9fsmkceq521", "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lvi9fsmk3zbhf4"],
+      "thumbnail": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lvi9fsmkceq521",
+      "stockDetails": {
+        "#ff0000": {
+          "L": 3,
+          "M": 2,
+          "XL": 5
+        },
+        "#50d71e": {
+          "S": 2,
+          "L": 1,
+          "XL": 3,
+          "2XL": 4
+        }
+      }
+    },
+    {
+      "id": 2,
+      "title": "Nike Sports Jacket",
+      "description": "Stylish sports jacket for women, perfect for outdoor activities.",
+      "category": "women",
+      "price": 89.99,
+      "discountPercentage": 15,
+      "rating": 4.7,
+      "stock": 15,
+      "type": "T-Shirt",
+      "tags": ["jacket", "sports", "nike"],
+      "brand": "Nike",
+      "sku": "NK54321",
+      "weight": 0.8,
+      "createdAt": "2024-05-23T08:56:21.618Z",
+      "dimensions": {
+        "width": 15,
+        "height": 2,
+        "depth": 18
+      },
+      "warrantyInformation": "1 year warranty",
+      "shippingInformation": "Ships within 3-5 business days",
+      "availabilityStatus": "In Stock",
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Love this jacket! Keeps me warm during my runs.",
+          "date": "2024-05-23T08:56:21.618Z",
+          "reviewerName": "Alice Johnson",
+          "reviewerEmail": "alice.johnson@example.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Good quality, but could be more water-resistant.",
+          "date": "2024-05-23T08:56:21.618Z",
+          "reviewerName": "Bob Brown",
+          "reviewerEmail": "bob.brown@example.com"
+        }
+      ],
+      "returnPolicy": "30 days return policy",
+      "minimumOrderQuantity": 1,
+      "meta": {
+        "createdAt": "2024-05-23T08:56:21.618Z",
+        "updatedAt": "2024-05-23T08:56:21.618Z",
+        "barcode": "9876543210987",
+        "qrCode": ""
+      },
+      "images": [""],
+      "thumbnail": "",
+      "stockDetails": {
+        "#000000": {
+          "M": 5,
+          "L": 5,
+          "XL": 5
+        },
+        "#ffffff": {
+          "S": 2,
+          "M": 3,
+          "L": 4,
+          "XL": 1
+        }
+      }
+    },
+    {
+      "id": 3,
+      "title": "Puma T-Shirt",
+      "description": "Comfortable and stylish t-shirt for men, suitable for casual wear.",
+      "category": "men",
+      "price": 29.99,
+      "discountPercentage": 5,
+      "rating": 4.3,
+      "stock": 25,
+      "type": "T-Shirt",
+      "tags": ["t-shirt", "casual", "puma"],
+      "brand": "Puma",
+      "sku": "PM67890",
+      "weight": 0.3,
+      "createdAt": "2024-05-23T08:56:21.618Z",
+      "dimensions": {
+        "width": 12,
+        "height": 1,
+        "depth": 14
+      },
+      "warrantyInformation": "6 months warranty",
+      "shippingInformation": "Ships within 3-5 business days",
+      "availabilityStatus": "In Stock",
+      "reviews": [
+        {
+          "rating": 4,
+          "comment": "Nice t-shirt, fits well.",
+          "date": "2024-05-23T08:56:21.618Z",
+          "reviewerName": "Chris Evans",
+          "reviewerEmail": "chris.evans@example.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Great quality and very comfortable.",
+          "date": "2024-05-23T08:56:21.618Z",
+          "reviewerName": "Sarah Lee",
+          "reviewerEmail": "sarah.lee@example.com"
+        }
+      ],
+      "returnPolicy": "30 days return policy",
+      "minimumOrderQuantity": 1,
+      "meta": {
+        "createdAt": "2024-05-23T08:56:21.618Z",
+        "updatedAt": "2024-05-23T08:56:21.618Z",
+        "barcode": "1230984567654",
+        "qrCode": ""
+      },
+      "images": [""],
+      "thumbnail": "",
+      "stockDetails": {
+        "#0000ff": {
+          "S": 2,
+          "M": 3,
+          "L": 4,
+          "XL": 1
+        },
+        "#50d71e": {
+          "S": 2,
+          "M": 3,
+          "L": 4,
+          "XL": 1
+        }
+      }
+    },
+    {
+      "id": 4,
+      "title": "Reebok Training Pants",
+      "description": "Durable and flexible training pants for women, ideal for workouts.",
+      "category": "women",
+      "price": 49.99,
+      "discountPercentage": 12,
+      "rating": 4.6,
+      "stock": 30,
+      "type": "Pant",
+      "tags": ["pants", "training", "reebok"],
+      "brand": "Reebok",
+      "sku": "RB12345",
+      "weight": 0.5,
+      "createdAt": "2024-05-23T08:56:21.618Z",
+      "dimensions": {
+        "width": 14,
+        "height": 1.5,
+        "depth": 16
+      },
+      "warrantyInformation": "1 year warranty",
+      "shippingInformation": "Ships within 3-5 business days",
+      "availabilityStatus": "In Stock",
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Excellent training pants, very comfortable.",
+          "date": "2024-05-23T08:56:21.618Z",
+          "reviewerName": "Emma Watson",
+          "reviewerEmail": "emma.watson@example.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Good quality, but a bit tight.",
+          "date": "2024-05-23T08:56:21.618Z",
+          "reviewerName": "Daniel Craig",
+          "reviewerEmail": "daniel.craig@example.com"
+        }
+      ],
+      "returnPolicy": "30 days return policy",
+      "minimumOrderQuantity": 1,
+      "meta": {
+        "createdAt": "2024-05-23T08:56:21.618Z",
+        "updatedAt": "2024-05-23T08:56:21.618Z",
+        "barcode": "9087654321098",
+        "qrCode": ""
+      },
+      "images": [""],
+      "thumbnail": "",
+      "stockDetails": {
+        "#000000": {
+          "M": 10,
+          "L": 5,
+          "XL": 10,
+          "2XL": 5
+        },
+        "#808080": {
+          "M": 5,
+          "L": 5,
+          "XL": 5,
+          "2XL": 5
+        }
+      }
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "groceries",
+      "description": "Grocery items including fresh produce, pantry staples, and more.",
+      "image": ""
+    },
+    {
+      "id": 2,
+      "name": "electronics",
+      "description": "Electronic devices, gadgets, and accessories.",
+      "image": ""
+    },
+    {
+      "id": 3,
+      "name": "clothing",
+      "description": "Apparel, footwear, and accessories",
+      "image": ""
+    },
+    {
+      "id": 4,
+      "name": "men",
+      "description": "Clothing, footwear, and accessories for men.",
+      "image": ""
+    },
+    {
+      "id": 5,
+      "name": "women",
+      "description": "Clothing, footwear, and accessories for women.",
+      "image": ""
+    }
+  ],
+  "brands": [
+    {
+      "id": 1,
+      "name": "Adidas",
+      "description": "Sportswear and athletic shoes",
+      "image": ""
+    },
+    {
+      "id": 2,
+      "name": "Apple",
+      "description": "Consumer electronics and software",
+      "image": ""
+    },
+    {
+      "id": 3,
+      "name": "Samsung",
+      "description": "Consumer electronics and appliances",
+      "image": ""
+    }
+  ],
+  "types": [
+    {
+      "id": 1,
+      "name": "T-Shirt",
+      "desciption": "Grocery items including fresh produce, pantry staples, and more.",
+      "image": ""
+    },
+    {
+      "id": 2,
+      "name": "Sleeve",
+      "image": ""
+    },
+    {
+      "id": 3,
+      "name": "Polo",
+      "image": ""
+    },
+    {
+      "id": 4,
+      "name": "Pant",
+      "image": ""
+    },
+    {
+      "id": 5,
+      "name": "Shoes",
+      "image": ""
+    }
+  ],
+  "carts": [
+    {
+      "id": 1,
+      "products": [
+        {
+          "id": 1,
+          "title": "Charger SXT RWD",
+          "size": "L",
+          "color": "blue",
+          "price": 100000,
+          "quantity": 3,
+          "total": 300000,
+          "discountPercentage": 13.39,
+          "discountedTotal": 85743.87,
+          "thumbnail": ""
+        },
+        {
+          "id": 2,
+          "title": "Apple MacBook Pro 14 Inch Space Grey",
+          "size": "XL",
+          "color": "green",
+          "price": 50000,
+          "quantity": 2,
+          "total": 100000,
+          "discountPercentage": 18.52,
+          "discountedTotal": 3259.18,
+          "thumbnail": ""
+        },
+        {
+          "id": 3,
+          "title": "Oval Earring",
+          "size": "S",
+          "color": "black",
+          "price": 200000,
+          "quantity": 5,
+          "total": 1000000,
+          "discountPercentage": 6.28,
+          "discountedTotal": 117.1,
+          "thumbnail": ""
+        },
+        {
+          "id": 4,
+          "title": "Apple Airpods",
+          "size": "M",
+          "color": "black",
+          "price": 15000000,
+          "quantity": 5,
+          "total": 75000000,
+          "discountPercentage": 12.84,
+          "discountedTotal": 566.5,
+          "thumbnail": ""
+        }
+      ],
+      "total": 76400000,
+      "discountedTotal": 0,
+      "userId": 3,
+      "totalProducts": 4,
+      "totalQuantity": 15
+    },
+    {
+      "id": 2,
+      "products": [
+        {
+          "id": 5,
+          "title": "Samsung Galaxy S21",
+          "size": "M",
+          "color": "black",
+          "price": 80000,
+          "quantity": 1,
+          "total": 80000,
+          "discountPercentage": 10.5,
+          "discountedTotal": 71700,
+          "thumbnail": ""
+        },
+        {
+          "id": 6,
+          "title": "Sony WH-1000XM4 Headphones",
+          "size": "L",
+          "color": "blue",
+          "price": 35000,
+          "quantity": 2,
+          "total": 70000,
+          "discountPercentage": 15,
+          "discountedTotal": 59500,
+          "thumbnail": ""
+        },
+        {
+          "id": 7,
+          "title": "Dell XPS 13 Laptop",
+          "size": "XL",
+          "color": "silver",
+          "price": 120000,
+          "quantity": 1,
+          "total": 120000,
+          "discountPercentage": 8,
+          "discountedTotal": 110400,
+          "thumbnail": ""
+        }
+      ],
+      "total": 270000,
+      "discountedTotal": 241600,
+      "userId": 4,
+      "totalProducts": 3,
+      "totalQuantity": 4
+    },
+    {
+      "id": 3,
+      "products": [
+        {
+          "id": 8,
+          "title": "GoPro HERO9",
+          "size": "S",
+          "color": "black",
+          "price": 50000,
+          "quantity": 3,
+          "total": 150000,
+          "discountPercentage": 12,
+          "discountedTotal": 132000,
+          "thumbnail": ""
+        },
+        {
+          "id": 9,
+          "title": "Nike Air Max 270",
+          "size": "M",
+          "color": "white",
+          "price": 15000,
+          "quantity": 2,
+          "total": 30000,
+          "discountPercentage": 5,
+          "discountedTotal": 28500,
+          "thumbnail": ""
+        },
+        {
+          "id": 10,
+          "title": "Sony PlayStation 5",
+          "size": "L",
+          "color": "white",
+          "price": 40000,
+          "quantity": 1,
+          "total": 40000,
+          "discountPercentage": 7,
+          "discountedTotal": 37200,
+          "thumbnail": ""
+        },
+        {
+          "id": 11,
+          "title": "Apple iPhone 12",
+          "size": "M",
+          "color": "blue",
+          "price": 60000,
+          "quantity": 2,
+          "total": 120000,
+          "discountPercentage": 10,
+          "discountedTotal": 108000,
+          "thumbnail": ""
+        }
+      ],
+      "total": 340000,
+      "discountedTotal": 305700,
+      "userId": 5,
+      "totalProducts": 4,
+      "totalQuantity": 8
+    },
+    {
+      "id": 4,
+      "products": [
+        {
+          "id": 12,
+          "title": "Bose SoundLink Speaker",
+          "size": "M",
+          "color": "black",
+          "price": 20000,
+          "quantity": 4,
+          "total": 80000,
+          "discountPercentage": 20,
+          "discountedTotal": 64000,
+          "thumbnail": ""
+        },
+        {
+          "id": 13,
+          "title": "HP Envy Printer",
+          "size": "L",
+          "color": "white",
+          "price": 15000,
+          "quantity": 1,
+          "total": 15000,
+          "discountPercentage": 5,
+          "discountedTotal": 14250,
+          "thumbnail": ""
+        },
+        {
+          "id": 14,
+          "title": "Fitbit Charge 4",
+          "size": "S",
+          "color": "black",
+          "price": 10000,
+          "quantity": 2,
+          "total": 20000,
+          "discountPercentage": 8,
+          "discountedTotal": 18400,
+          "thumbnail": ""
+        }
+      ],
+      "total": 115000,
+      "discountedTotal": 96650,
+      "userId": 6,
+      "totalProducts": 3,
+      "totalQuantity": 7
+    },
+    {
+      "id": 5,
+      "products": [
+        {
+          "id": 15,
+          "title": "Microsoft Surface Pro 7",
+          "size": "L",
+          "color": "black",
+          "price": 75000,
+          "quantity": 1,
+          "total": 75000,
+          "discountPercentage": 7.5,
+          "discountedTotal": 69375,
+          "thumbnail": ""
+        },
+        {
+          "id": 16,
+          "title": "Logitech MX Master 3 Mouse",
+          "size": "S",
+          "color": "gray",
+          "price": 10000,
+          "quantity": 3,
+          "total": 30000,
+          "discountPercentage": 10,
+          "discountedTotal": 27000,
+          "thumbnail": ""
+        }
+      ],
+      "total": 105000,
+      "discountedTotal": 96375,
+      "userId": 7,
+      "totalProducts": 2,
+      "totalQuantity": 4
+    },
+    {
+      "id": 6,
+      "products": [
+        {
+          "id": 17,
+          "title": "Apple Watch Series 6",
+          "size": "M",
+          "color": "red",
+          "price": 40000,
+          "quantity": 2,
+          "total": 80000,
+          "discountPercentage": 5,
+          "discountedTotal": 76000,
+          "thumbnail": ""
+        },
+        {
+          "id": 18,
+          "title": "Razer BlackWidow Keyboard",
+          "size": "L",
+          "color": "green",
+          "price": 12000,
+          "quantity": 1,
+          "total": 12000,
+          "discountPercentage": 12,
+          "discountedTotal": 10560,
+          "thumbnail": ""
+        },
+        {
+          "id": 19,
+          "title": "Nintendo Switch",
+          "size": "XL",
+          "color": "blue",
+          "price": 30000,
+          "quantity": 1,
+          "total": 30000,
+          "discountPercentage": 7,
+          "discountedTotal": 27900,
+          "thumbnail": ""
+        }
+      ],
+      "total": 122000,
+      "discountedTotal": 114460,
+      "userId": 8,
+      "totalProducts": 3,
+      "totalQuantity": 4
+    },
+    {
+      "id": 7,
+      "products": [
+        {
+          "id": 20,
+          "title": "Canon EOS 1500D",
+          "size": "M",
+          "color": "black",
+          "price": 45000,
+          "quantity": 1,
+          "total": 45000,
+          "discountPercentage": 10,
+          "discountedTotal": 40500,
+          "thumbnail": ""
+        },
+        {
+          "id": 21,
+          "title": "Asus ROG Zephyrus G14",
+          "size": "L",
+          "color": "gray",
+          "price": 100000,
+          "quantity": 1,
+          "total": 100000,
+          "discountPercentage": 15,
+          "discountedTotal": 85000,
+          "thumbnail": ""
+        }
+      ],
+      "total": 145000,
+      "discountedTotal": 125500,
+      "userId": 9,
+      "totalProducts": 2,
+      "totalQuantity": 2
+    },
+    {
+      "id": 8,
+      "products": [
+        {
+          "id": 22,
+          "title": "DJI Mavic Air 2",
+          "size": "XL",
+          "color": "white",
+          "price": 60000,
+          "quantity": 1,
+          "total": 60000,
+          "discountPercentage": 10,
+          "discountedTotal": 54000,
+          "thumbnail": ""
+        },
+        {
+          "id": 23,
+          "title": "Google Nest Hub",
+          "size": "M",
+          "color": "black",
+          "price": 8000,
+          "quantity": 2,
+          "total": 16000,
+          "discountPercentage": 5,
+          "discountedTotal": 15200,
+          "thumbnail": ""
+        },
+        {
+          "id": 24,
+          "title": "Kindle Paperwhite",
+          "size": "S",
+          "color": "blue",
+          "price": 10000,
+          "quantity": 3,
+          "total": 30000,
+          "discountPercentage": 8,
+          "discountedTotal": 27600,
+          "thumbnail": ""
+        }
+      ],
+      "total": 106000,
+      "discountedTotal": 96800,
+      "userId": 10,
+      "totalProducts": 3,
+      "totalQuantity": 6
+    },
+    {
+      "id": 9,
+      "products": [
+        {
+          "id": 25,
+          "title": "JBL Flip 5",
+          "size": "S",
+          "color": "red",
+          "price": 10000,
+          "quantity": 2,
+          "total": 20000,
+          "discountPercentage": 12,
+          "discountedTotal": 17600,
+          "thumbnail": ""
+        },
+        {
+          "id": 26,
+          "title": "Garmin Forerunner 945",
+          "size": "M",
+          "color": "black",
+          "price": 40000,
+          "quantity": 1,
+          "total": 40000,
+          "discountPercentage": 10,
+          "discountedTotal": 36000,
+          "thumbnail": ""
+        }
+      ],
+      "total": 60000,
+      "discountedTotal": 53600,
+      "userId": 11,
+      "totalProducts": 2,
+      "totalQuantity": 3
+    },
+    {
+      "id": 10,
+      "products": [
+        {
+          "id": 27,
+          "title": "Apple iPad Pro 12.9",
+          "size": "XL",
+          "color": "gray",
+          "price": 90000,
+          "quantity": 1,
+          "total": 90000,
+          "discountPercentage": 10,
+          "discountedTotal": 81000,
+          "thumbnail": ""
+        },
+        {
+          "id": 28,
+          "title": "Samsung T7 Portable SSD",
+          "size": "S",
+          "color": "red",
+          "price": 15000,
+          "quantity": 2,
+          "total": 30000,
+          "discountPercentage": 8,
+          "discountedTotal": 27600,
+          "thumbnail": ""
+        },
+        {
+          "id": 29,
+          "title": "LG OLED TV",
+          "size": "L",
+          "color": "black",
+          "price": 200000,
+          "quantity": 1,
+          "total": 200000,
+          "discountPercentage": 15,
+          "discountedTotal": 170000,
+          "thumbnail": ""
+        }
+      ],
+      "total": 320000,
+      "discountedTotal": 278600,
+      "userId": 12,
+      "totalProducts": 3,
+      "totalQuantity": 4
+    },
+    {
+      "id": 11,
+      "products": [
+        {
+          "id": 30,
+          "title": "Amazon Echo Dot",
+          "size": "S",
+          "color": "black",
+          "price": 5000,
+          "quantity": 3,
+          "total": 15000,
+          "discountPercentage": 5,
+          "discountedTotal": 14250,
+          "thumbnail": ""
+        },
+        {
+          "id": 31,
+          "title": "Roku Streaming Stick+",
+          "size": "M",
+          "color": "black",
+          "price": 6000,
+          "quantity": 2,
+          "total": 12000,
+          "discountPercentage": 7,
+          "discountedTotal": 11160,
+          "thumbnail": ""
+        },
+        {
+          "id": 32,
+          "title": "Anker PowerCore 10000",
+          "size": "L",
+          "color": "white",
+          "price": 5000,
+          "quantity": 1,
+          "total": 5000,
+          "discountPercentage": 10,
+          "discountedTotal": 4500,
+          "thumbnail": ""
+        }
+      ],
+      "total": 32000,
+      "discountedTotal": 29910,
+      "userId": 13,
+      "totalProducts": 3,
+      "totalQuantity": 6
+    },
+    {
+      "id": 12,
+      "products": [
+        {
+          "id": 33,
+          "title": "Sonos One SL",
+          "size": "M",
+          "color": "white",
+          "price": 17000,
+          "quantity": 2,
+          "total": 34000,
+          "discountPercentage": 12,
+          "discountedTotal": 29920,
+          "thumbnail": ""
+        },
+        {
+          "id": 34,
+          "title": "Philips Hue Starter Kit",
+          "size": "L",
+          "color": "white",
+          "price": 15000,
+          "quantity": 1,
+          "total": 15000,
+          "discountPercentage": 8,
+          "discountedTotal": 13800,
+          "thumbnail": ""
+        },
+        {
+          "id": 35,
+          "title": "Ring Video Doorbell",
+          "size": "S",
+          "color": "silver",
+          "price": 10000,
+          "quantity": 1,
+          "total": 10000,
+          "discountPercentage": 5,
+          "discountedTotal": 9500,
+          "thumbnail": ""
+        }
+      ],
+      "total": 59000,
+      "discountedTotal": 53220,
+      "userId": 14,
+      "totalProducts": 3,
+      "totalQuantity": 4
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "userId": 1,
+      "createdAt": "2024-07-23T09:56:21.618Z",
+      "completedAt": "2024-07-23T09:59:21.618Z",
+      "amount": 5000000,
+      "status": "paid",
+      "products": [
+        {
+          "id": 1,
+          "title": "Essence Mascara Lash Princess",
+          "price": 9.99,
+          "quantity": 2,
+          "total": 19.98,
+          "discountPercentage": 0.63,
+          "discountedTotal": 19.85,
+          "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/thumbnail.png"
+        },
+        {
+          "id": 60,
+          "title": "Grater Black",
+          "price": 10.99,
+          "quantity": 3,
+          "total": 32.97,
+          "discountPercentage": 16.62,
+          "discountedTotal": 27.49,
+          "thumbnail": "https://cdn.dummyjson.com/products/images/kitchen-accessories/Grater%20Black/thumbnail.png"
+        },
+        {
+          "id": 74,
+          "title": "Spoon",
+          "price": 4.99,
+          "quantity": 4,
+          "total": 19.96,
+          "discountPercentage": 2.78,
+          "discountedTotal": 19.41,
+          "thumbnail": "https://cdn.dummyjson.com/products/images/kitchen-accessories/Spoon/thumbnail.png"
+        },
+        {
+          "id": 44,
+          "title": "Family Tree Photo Frame",
+          "price": 29.99,
+          "quantity": 4,
+          "total": 119.96,
+          "discountPercentage": 10.68,
+          "discountedTotal": 107.15,
+          "thumbnail": "https://cdn.dummyjson.com/products/images/home-decoration/Family%20Tree%20Photo%20Frame/thumbnail.png"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "createdAt": "2024-05-23T08:50:21.618Z",
+      "completedAt": "2024-07-23T09:52:19.618Z",
+      "amount": 5000000,
+      "status": "pending",
+      "products": []
+    }
+  ],
+  "users": [
+    {
+      "email": "teacher@gmail.com",
+      "password": "$2a$10$UY4fxakOtR0zjFzMfUsHROPEzwwtNXTsgoTwSKNl38VtBmnfJuuOm",
+      "username": "chungdt3",
+      "confirmPassword": "111111",
+      "id": 1,
+      "role": "admin",
+      "phone": "0123456789",
+      "address": "Ha Noi",
+      "gender": "men",
+      "createdAt": "2024-05-28T07:30:50.451+00:00",
+      "updatedAt": "2024-05-28T07:31:50.451+00:00",
+      "loginType": "system"
+    },
+    {
+      "email": "admin@fpt.edu.vn",
+      "password": "$2a$10$Ov.4O5NCiJ2lxF0jUX81zekROkGViwZbVVkIq3sDwrGNiqEblTfNu",
+      "username": "chungdt",
+      "confirmPassword": "111111",
+      "id": 2,
+      "role": "customer",
+      "phone": "0123456798",
+      "address": "Ha Noi",
+      "gender": "women",
+      "createdAt": "2024-05-28T07:32:04.900+00:00",
+      "updatedAt": "2024-05-28T07:31:50.451+00:00",
+      "loginType": "facebook"
+    },
+    {
+      "email": "tmoore@hotmail.com",
+      "password": "$2a$10$UY4fxakOtR0zjFzMfUsHROPEzwwtNXTsgoTwSKNl38VtBmnfJuuOm",
+      "username": "zgray",
+      "confirmPassword": "111111",
+      "id": 2,
+      "role": "admin",
+      "phone": "304-405-4000x694",
+      "address": "39842 Steven Row\nPort Amyside, MS 72766",
+      "gender": "men",
+      "createdAt": "2023-08-16T21:06:34.611200",
+      "updatedAt": "2023-08-16T22:01:34.611200",
+      "loginType": "system"
+    },
+    {
+      "email": "ohill@lopez.biz",
+      "password": "$2a$10$UY4fxakOtR0zjFzMfUsHROPEzwwtNXTsgoTwSKNl38VtBmnfJuuOm",
+      "username": "smithjames",
+      "confirmPassword": "111111",
+      "id": 3,
+      "role": "user",
+      "phone": "+1-323-477-0504x6524",
+      "address": "894 Mark Squares Suite 574\nNorth Davidshire, NV 43244",
+      "gender": "women",
+      "createdAt": "2023-12-17T06:59:10",
+      "updatedAt": "2023-12-17T07:04:10",
+      "loginType": "system"
+    },
+    {
+      "email": "jacksonbriana@hotmail.com",
+      "password": "$2a$10$UY4fxakOtR0zjFzMfUsHROPEzwwtNXTsgoTwSKNl38VtBmnfJuuOm",
+      "username": "john73",
+      "confirmPassword": "111111",
+      "id": 4,
+      "role": "admin",
+      "phone": "(039)024-5565x8951",
+      "address": "241 Marc Stream Suite 787\nAmberhaven, UT 46349",
+      "gender": "women",
+      "createdAt": "2023-11-23T00:35:50",
+      "updatedAt": "2023-11-23T00:45:50",
+      "loginType": "oauth"
+    },
+    {
+      "email": "zpeterson@yahoo.com",
+      "password": "$2a$10$UY4fxakOtR0zjFzMfUsHROPEzwwtNXTsgoTwSKNl38VtBmnfJuuOm",
+      "username": "christinarobinson",
+      "confirmPassword": "111111",
+      "id": 5,
+      "role": "admin",
+      "phone": "3043968358",
+      "address": "9513 Thompson Ville\nHeathertown, NJ 12277",
+      "gender": "men",
+      "createdAt": "2023-10-15T21:06:34.611200",
+      "updatedAt": "2023-10-15T21:11:34.611200",
+      "loginType": "oauth"
+    },
+    {
+      "email": "ramirezdenise@yahoo.com",
+      "password": "$2a$10$UY4fxakOtR0zjFzMfUsHROPEzwwtNXTsgoTwSKNl38VtBmnfJuuOm",
+      "username": "johnsonkimberly",
+      "confirmPassword": "111111",
+      "id": 6,
+      "role": "admin",
+      "phone": "+1-736-273-0578x969",
+      "address": "PSC 0431, Box 2217\nAPO AP 61430",
+      "gender": "men",
+      "createdAt": "2024-01-14T21:06:34.611200",
+      "updatedAt": "2024-01-14T22:04:34.611200",
+      "loginType": "oauth"
+    },
+    {
+      "email": "jerry51@johnson.com",
+      "password": "$2a$10$UY4fxakOtR0zjFzMfUsHROPEzwwtNXTsgoTwSKNl38VtBmnfJuuOm",
+      "username": "fletcherjason",
+      "confirmPassword": "111111",
+      "id": 7,
+      "role": "user",
+      "phone": "002-994-0411x5463",
+      "address": "797 Cole Vista Apt. 729\nRoblesville, MO 56475",
+      "gender": "women",
+      "createdAt": "2023-07-27T21:06:34.611200",
+      "updatedAt": "2023-07-27T21:11:34.611200",
+      "loginType": "system"
+    },
+    {
+      "email": "codybrown@rogers.com",
+      "password": "$2a$10$UY4fxakOtR0zjFzMfUsHROPEzwwtNXTsgoTwSKNl38VtBmnfJuuOm",
+      "username": "paigejackson",
+      "confirmPassword": "111111",
+      "id": 8,
+      "role": "user",
+      "phone": "(005)654-2463x084",
+      "address": "3622 Freeman Street\nLake Amberg, OR 74961",
+      "gender": "women",
+      "createdAt": "2023-10-03T21:06:34.611200",
+      "updatedAt": "2023-10-03T21:49:34.611200",
+      "loginType": "oauth"
+    },
+    {
+      "email": "crosbyanthony@yahoo.com",
+      "password": "$2a$10$UY4fxakOtR0zjFzMfUsHROPEzwwtNXTsgoTwSKNl38VtBmnfJuuOm",
+      "username": "hayneskimberly",
+      "confirmPassword": "111111",
+      "id": 9,
+      "role": "user",
+      "phone": "+1-152-418-2502",
+      "address": "6291 Jason Station\nSouth Danielborough, VT 26831",
+      "gender": "women",
+      "createdAt": "2024-05-14T21:06:34.611200",
+      "updatedAt": "2024-05-14T22:02:34.611200",
+      "loginType": "system"
+    },
+    {
+      "email": "brianna17@yahoo.com",
+      "password": "$2a$10$UY4fxakOtR0zjFzMfUsHROPEzwwtNXTsgoTwSKNl38VtBmnfJuuOm",
+      "username": "daniel61",
+      "confirmPassword": "111111",
+      "id": 10,
+      "role": "admin",
+      "phone": "016.673.0380",
+      "address": "321 Riley Centers\nEast Dianeport, AR 18936",
+      "gender": "women",
+      "createdAt": "2023-09-26T21:06:34.611200",
+      "updatedAt": "2023-09-26T21:34:34.611200",
+      "loginType": "system"
+    },
+    {
+      "email": "valerie57@schultz.info",
+      "password": "$2a$10$UY4fxakOtR0zjFzMfUsHROPEzwwtNXTsgoTwSKNl38VtBmnfJuuOm",
+      "username": "john48",
+      "confirmPassword": "111111",
+      "id": 11,
+      "role": "user",
+      "phone": "(404)840-4695",
+      "address": "919 Watson Garden Apt. 307\nSouth Heather, LA 78063",
+      "gender": "women",
+      "createdAt": "2023-12-26T21:06:34.611200",
+      "updatedAt": "2023-12-26T21:39:34.611200",
+      "loginType": "oauth"
+    },
+    {
+      "email": "tranthomas@baker.com",
+      "password": "$2a$10$UY4fxakOtR0zjFzMfUsHROPEzwwtNXTsgoTwSKNl38VtBmnfJuuOm",
+      "username": "dyerchelsea",
+      "confirmPassword": "111111",
+      "id": 12,
+      "role": "admin",
+      "phone": "001-951-699-5085x1421",
+      "address": "4624 Charles Locks Suite 511\nMatthewsview, OK 31167",
+      "gender": "women",
+      "createdAt": "2023-08-05T21:06:34.611200",
+      "updatedAt": "2023-08-05T22:04:34.611200",
+      "loginType": "oauth"
+    },
+    {
+      "email": "sabrina32@yahoo.com",
+      "password": "$2a$10$UY4fxakOtR0zjFzMfUsHROPEzwwtNXTsgoTwSKNl38VtBmnfJuuOm",
+      "username": "kharris",
+      "confirmPassword": "111111",
+      "id": 13,
+      "role": "admin",
+      "phone": "264-477-6266",
+      "address": "75252 Smith Gateway Suite 345\nLauraburgh, RI 71579",
+      "gender": "men",
+      "createdAt": "2023-07-05T21:06:34.611200",
+      "updatedAt": "2023-07-05T22:05:34.611200",
+      "loginType": "oauth"
+    },
+    {
+      "email": "donna31@rhodes.biz",
+      "password": "$2a$10$UY4fxakOtR0zjFzMfUsHROPEzwwtNXTsgoTwSKNl38VtBmnfJuuOm",
+      "username": "qschmidt",
+      "confirmPassword": "111111",
+      "id": 14,
+      "role": "admin",
+      "phone": "+1.326.348.9150",
+      "address": "6884 Wanda Garden Suite 098\nWest Alyssaport, SC 01352",
+      "gender": "men",
+      "createdAt": "2024-03-10T21:06:34.611200",
+      "updatedAt": "2024-03-10T22:04:34.611200",
+      "loginType": "oauth"
+    },
+    {
+      "email": "chelsea26@yahoo.com",
+      "password": "$2a$10$UY4fxakOtR0zjFzMfUsHROPEzwwtNXTsgoTwSKNl38VtBmnfJuuOm",
+      "username": "leecharles",
+      "confirmPassword": "111111",
+      "id": 15,
+      "role": "user",
+      "phone": "+1-426-376-1313",
+      "address": "8410 Jordan Stravenue Apt. 231\nOlsonville, NH 32425",
+      "gender": "men",
+      "createdAt": "2023-11-14T21:06:34.611200",
+      "updatedAt": "2023-11-14T21:46:34.611200",
+      "loginType": "system"
+    },
+    {
+      "email": "peterpowell@graves-miller.com",
+      "password": "$2a$10$UY4fxakOtR0zjFzMfUsHROPEzwwtNXTsgoTwSKNl38VtBmnfJuuOm",
+      "username": "cthomas",
+      "confirmPassword": "111111",
+      "id": 16,
+      "role": "admin",
+      "phone": "001-972-186-6835x5886",
+      "address": "15789 Allison Bridge Suite 805\nNorth Melissafort, NY 93164",
+      "gender": "women",
+      "createdAt": "2024-02-01T21:06:34.611200",
+      "updatedAt": "2024-02-01T21:11:34.611200",
+      "loginType": "system"
+    },
+    {
+      "email": "hwang@smith-bush.biz",
+      "password": "$2a$10$UY4fxakOtR0zjFzMfUsHROPEzwwtNXTsgoTwSKNl38VtBmnfJuuOm",
+      "username": "khill",
+      "confirmPassword": "111111",
+      "id": 17,
+      "role": "admin",
+      "phone": "001-858-798-4148x1644",
+      "address": "4544 Benjamin Walks Suite 648\nWest Keith, FL 62966",
+      "gender": "women",
+      "createdAt": "2023-10-28T21:06:34.611200",
+      "updatedAt": "2023-10-28T21:23:34.611200",
+      "loginType": "oauth"
+    },
+    {
+      "email": "oliver.robert@gmail.com",
+      "password": "$2a$10$UY4fxakOtR0zjFzMfUsHROPEzwwtNXTsgoTwSKNl38VtBmnfJuuOm",
+      "username": "oliverrobert",
+      "confirmPassword": "111111",
+      "id": 18,
+      "role": "admin",
+      "phone": "(991)441-4265x782",
+      "address": "956 Bruce Squares\nBradleyfort, IA 85295",
+      "gender": "women",
+      "createdAt": "2024-04-12T21:06:34.611200",
+      "updatedAt": "2024-04-12T21:41:34.611200",
+      "loginType": "oauth"
+    },
+    {
+      "email": "jgibson@smith-long.info",
+      "password": "$2a$10$UY4fxakOtR0zjFzMfUsHROPEzwwtNXTsgoTwSKNl38VtBmnfJuuOm",
+      "username": "fking",
+      "confirmPassword": "111111",
+      "id": 19,
+      "role": "user",
+      "phone": "(950)843-2790x35749",
+      "address": "334 Jerry Mountains\nKathleenside, MS 63785",
+      "gender": "women",
+      "createdAt": "2023-06-17T21:06:34.611200",
+      "updatedAt": "2023-06-17T22:02:34.611200",
+      "loginType": "oauth"
+    },
+    {
+      "email": "stephen22@yahoo.com",
+      "password": "$2a$10$UY4fxakOtR0zjFzMfUsHROPEzwwtNXTsgoTwSKNl38VtBmnfJuuOm",
+      "username": "courtney63",
+      "confirmPassword": "111111",
+      "id": 20,
+      "role": "user",
+      "phone": "018.530.1136x7245",
+      "address": "5954 Jessica Rapids\nLake Dwaynehaven, FL 39239",
+      "gender": "women",
+      "createdAt": "2023-06-29T20:30:06",
+      "updatedAt": "2023-06-29T20:44:06",
+      "loginType": "oauth"
+    },
+    {
+      "email": "atkinsondonald@garcia.org",
+      "password": "$2a$10$UY4fxakOtR0zjFzMfUsHROPEzwwtNXTsgoTwSKNl38VtBmnfJuuOm",
+      "username": "carneylaurie",
+      "confirmPassword": "111111",
+      "id": 21,
+      "role": "admin",
+      "phone": "+1-579-358-6511x47596",
+      "address": "17621 Lewis Junction Suite 718\nSouth Shannon, OK 93526",
+      "gender": "men",
+      "createdAt": "2023-09-15T21:06:34.611200",
+      "updatedAt": "2023-09-15T21:26:34.611200",
+      "loginType": "oauth"
+    }
+  ],
+  "roles": [
+    {
+      "id": 1,
+      "name": "admin"
+    },
+    {
+      "id": 2,
+      "name": "customer"
+    },
+    {
+      "id": 3,
+      "name": "seller"
+    }
+  ],
+  "loginTypes": [
+    {
+      "id": 1,
+      "name": "system"
+    },
+    {
+      "id": 2,
+      "name": "facebook"
+    }
+  ]
+}
