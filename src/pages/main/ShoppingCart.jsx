@@ -51,11 +51,7 @@ const ShoppingCart = ({ cartsData }) => {
               </div>
             </div>
             <div className="flex items-center">
-              <select
-                value={item.quantity}
-                onChange={(e) => handleQuantityChange(item.id, parseInt(e.target.value))}
-                className="border border-gray-300 rounded-md p-1"
-              >
+              <select value={item.quantity} onChange={(e) => handleQuantityChange(item.id, parseInt(e.target.value))} className="border border-gray-300 rounded-md p-1">
                 {[1, 2, 3, 4, 5].map((num) => (
                   <option key={num} value={num}>
                     {num}
@@ -100,11 +96,7 @@ const ShoppingCart = ({ cartsData }) => {
             <span>{subtotal.toLocaleString()} đ</span>
           </div>
           <div className="flex items-center mb-4">
-            <input
-              type="text"
-              placeholder="Enter Coupon"
-              className="border border-gray-300 rounded-md p-1 mr-2 flex-grow"
-            />
+            <input type="text" placeholder="Enter Coupon" className="border border-gray-300 rounded-md p-1 mr-2 flex-grow" />
             <button className="bg-black text-white py-1 px-3 rounded-md">Submit</button>
           </div>
           <div className="flex justify-between mb-2">
