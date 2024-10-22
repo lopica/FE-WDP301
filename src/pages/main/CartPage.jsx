@@ -172,7 +172,6 @@ const CartPage = () => {
             <div className="col-span-1 text-right">{(product.price * product.quantity).toLocaleString("en-US")}</div>
           </div>
         ))}
-
         <div className="flex justify-end">
           <div className="mt-6 w-1/3">
             <div className="flex justify-between border-t pt-2">
