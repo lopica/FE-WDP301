@@ -8,7 +8,7 @@ import axios from "axios";
 import { toast } from "react-hot-toast";
 import { Tabs } from "../../components/TabUnderLine";
 import { Button } from "@/components/ui/button";
-import TryOn from "@/components/TryOn";
+// import TryOn from "@/components/TryOn";
 
 const ProductDetail = () => {
   const { id } = useParams();
@@ -218,9 +218,9 @@ const ProductDetail = () => {
                 )}
               </div>
             </div>
-            <div className="pt-10">
+            {/* <div className="pt-10">
               <TryOn />
-            </div>
+            </div> */}
           </div>
           <div className="flex-1">
             {/* ======= Product Title ======= */}
@@ -238,7 +238,10 @@ const ProductDetail = () => {
             {/* <div className="p-2 bg-gray-100 w-1/2 flex items-center"> */}
             <p className="text-xl text-red-500 font-semibold mb-6">{formatCurrency(product.price)}</p>
             {/* </div> */}
-            <p className="mb-2">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.</p>
+            <p className="mb-2">
+              It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
+              normal distribution of letters.
+            </p>
             {/* ======================================= availability status ======================================= */}
             {/* <div className="flex items-center mb-4">
               <span className="text-gray-700">Status:</span>
@@ -248,7 +251,12 @@ const ProductDetail = () => {
             <span className="text-gray-700 font-bold">Color:</span>
             <div className="flex space-x-2 mt-2">
               {availableColors.map((detail) => (
-                <div key={detail.colorCode} className={`w-5 h-5 rounded-full cursor-pointer border-2 ${selectedColor === detail.colorCode ? `ring-2 ring-offset-2` : ""}`} style={{ backgroundColor: detail.colorCode }} onClick={() => handleColorSelect(detail.colorCode)}></div>
+                <div
+                  key={detail.colorCode}
+                  className={`w-5 h-5 rounded-full cursor-pointer border-2 ${selectedColor === detail.colorCode ? `ring-2 ring-offset-2` : ""}`}
+                  style={{ backgroundColor: detail.colorCode }}
+                  onClick={() => handleColorSelect(detail.colorCode)}
+                ></div>
               ))}
             </div>
             {/* Size select */}
@@ -257,7 +265,11 @@ const ProductDetail = () => {
                 <span className="text-gray-700 font-bold">Size:</span>
                 <div className="flex space-x-2 mt-2">
                   {availableSizes.map((size) => (
-                    <button key={size} className={`px-3 py-1 border-[1px] rounded ${selectedSize === size ? "bg-black font-medium text-white border-black" : "bg-white text-black border-black"}`} onClick={() => handleSizeSelect(size)}>
+                    <button
+                      key={size}
+                      className={`px-3 py-1 border-[1px] rounded ${selectedSize === size ? "bg-black font-medium text-white border-black" : "bg-white text-black border-black"}`}
+                      onClick={() => handleSizeSelect(size)}
+                    >
                       {size}
                     </button>
                   ))}
@@ -281,14 +293,60 @@ const ProductDetail = () => {
 
                 <div className="py-2 px-3 inline-block bg-white border border-black rounded-sm" data-hs-input-number="">
                   <div className="flex items-center gap-x-1.5">
-                    <button type="button" className="size-6 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-md border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none" tabIndex="-1" aria-label="Decrease" data-hs-input-number-decrement="" onClick={() => handleQuantityChange(-1)}>
-                      <svg className="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <button
+                      type="button"
+                      className="size-6 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-md border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none"
+                      tabIndex="-1"
+                      aria-label="Decrease"
+                      data-hs-input-number-decrement=""
+                      onClick={() => handleQuantityChange(-1)}
+                    >
+                      <svg
+                        className="shrink-0 size-3.5"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
                         <path d="M5 12h14"></path>
                       </svg>
                     </button>
-                    <input className="p-0 w-6 bg-transparent border-0 text-gray-800 text-center focus:ring-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none" style={{ MozAppearance: "textfield" }} type="number" aria-roledescription="Number field" value={quantity} onChange={handleQuantityInputChange} min="1" max={availableStock} data-hs-input-number-input="" />
-                    <button type="button" className="size-6 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-md border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none" tabIndex="-1" aria-label="Increase" data-hs-input-number-increment="" onClick={() => handleQuantityChange(1)}>
-                      <svg className="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <input
+                      className="p-0 w-6 bg-transparent border-0 text-gray-800 text-center focus:ring-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
+                      style={{ MozAppearance: "textfield" }}
+                      type="number"
+                      aria-roledescription="Number field"
+                      value={quantity}
+                      onChange={handleQuantityInputChange}
+                      min="1"
+                      max={availableStock}
+                      data-hs-input-number-input=""
+                    />
+                    <button
+                      type="button"
+                      className="size-6 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-md border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none"
+                      tabIndex="-1"
+                      aria-label="Increase"
+                      data-hs-input-number-increment=""
+                      onClick={() => handleQuantityChange(1)}
+                    >
+                      <svg
+                        className="shrink-0 size-3.5"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
                         <path d="M5 12h14"></path>
                         <path d="M12 5v14"></path>
                       </svg>
@@ -344,7 +402,10 @@ const ProductDetail = () => {
           </div>
           <div className="mt-10">
             <h2 className="text-2xl font-bold mb-2">Product Description</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum ipsa nulla, sequi, aspernatur itaque voluptatum soluta cum esse, iure fugiat deleniti officia sunt doloremque rem nemo obcaecati vero distinctio accusantium!</p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum ipsa nulla, sequi, aspernatur itaque voluptatum soluta cum esse, iure fugiat deleniti officia sunt doloremque rem nemo
+              obcaecati vero distinctio accusantium!
+            </p>
             <p className="mt-2">{product.description}.</p>
             <div className="grid grid-cols-2 w-1/2 mt-5">
               <div>
