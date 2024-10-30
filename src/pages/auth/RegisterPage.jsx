@@ -7,7 +7,7 @@ import axios from "axios";
 import axiosInstance from "../../utils/axiosInstance";
 
 const RegisterPage = () => {
-  const [name, setName] = useState("");
+  // const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -20,7 +20,7 @@ const RegisterPage = () => {
       toast.error("Passwords do not match");
       return;
     }
-    const formData = { name, email, password };
+    const formData = { email, password };
     try {
       const response = await axios.post("http://localhost:9999/api/auth/signup", formData);
       //mess này trả về từ server, hàm sign up bên trong authController ấy
@@ -50,9 +50,9 @@ const RegisterPage = () => {
                 <label className="flex justify-center text-gray-700 mb-5" htmlFor="email">
                   Enter your email to sign up for this app
                 </label>
-                <div className="mb-4">
+                {/* <div className="mb-4">
                   <input type="text" value={name} onChange={(e) => setName(e.target.value)} className="w-full px-3 py-2 border rounded" placeholder="Full Name" />
-                </div>
+                </div> */}
                 <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} className="w-full px-3 py-2 border rounded" placeholder="email@domain.com" />
               </div>
               <div className="mb-4">

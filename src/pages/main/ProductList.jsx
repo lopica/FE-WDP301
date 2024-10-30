@@ -46,6 +46,7 @@ const ProductList = ({ category }) => {
           }
         }
         setProducts(response.data);
+        console.log(response.data)
       } catch (error) {
         console.error("Error fetching products:", error);
       }
@@ -85,7 +86,7 @@ const ProductList = ({ category }) => {
     const matchesStatus = product.availabilityStatus?.toLowerCase() === "in stock";
     return matchesColor && matchesPrice && matchesBrand && matchesType && matchesTag && matchesSearchQuery && matchesStatus;
   });
-
+  console.log(filteredProducts)
   const sortedProducts = sortProducts(filteredProducts);
 
   return (

@@ -17,7 +17,7 @@ export const checkUserRole = (token, requiredRoles) => {
 
   try {
     const decodedToken = jwtDecode(token);
-    return requiredRoles.includes(decodedToken.role.name);
+    return requiredRoles.includes(decodedToken.role);
   } catch (error) {
     console.error("Invalid token", error);
     return false;

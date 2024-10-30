@@ -5,6 +5,7 @@ import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-hot-toast";
 import { UserContext } from "../../App"; // Import UserContext
+import { jwtDecode } from "jwt-decode";
 
 const LoginPage = () => {
 
@@ -32,18 +33,19 @@ const LoginPage = () => {
         productSelection: savedProductSelection,
       });
       if (response.status === 201) {
-        toast.success(response.data.message);
-        const { accessToken, user } = response.data;
+        toast.success('Login successful');
+        const { access_token } = response.data;
 
+        const user = jwtDecode(access_token);
         if (rememberMe) {
-          localStorage.setItem("accessToken", accessToken);
+          localStorage.setItem("accessToken", access_token);
           localStorage.setItem("user", JSON.stringify(user));
         } else {
-          sessionStorage.setItem("accessToken", accessToken);
+          sessionStorage.setItem("accessToken", access_token);
           sessionStorage.setItem("user", JSON.stringify(user));
         }
 
-        setUserAuth({ accessToken, user }); // Update context
+        setUserAuth({ accessToken: access_token, user }); // Update context
 
         // Clear the saved product selection after login
         localStorage.removeItem("productSelection");

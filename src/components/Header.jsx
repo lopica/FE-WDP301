@@ -13,17 +13,17 @@ const Header = () => {
 
   const handleLogout = async () => {
     try {
-      await axios.post(
-        "http://localhost:9999/api/auth/logout",
-        {
-          userId: userAuth.user.id,
-        },
-        {
-          headers: {
-            token: `Bearer ${userAuth.accessToken}`,
-          },
-        },
-      );
+      // await axios.post(
+      //   "http://localhost:9999/api/auth/logout",
+      //   {
+      //     userId: userAuth.user.id,
+      //   },
+      //   {
+      //     headers: {
+      //       token: `Bearer ${userAuth.accessToken}`,
+      //     },
+      //   },
+      // );
       sessionStorage.removeItem("accessToken");
       sessionStorage.removeItem("user");
       setUserAuth({ accessToken: null, user: null });
@@ -45,7 +45,7 @@ const Header = () => {
         <div className="container mx-auto flex justify-end items-center px-4">
           {userAuth.accessToken ? (
             <div>
-              {userAuth.user?.name}
+              {userAuth.user?.email}
               <span className="ml-4 mr-4">|</span>
               {userAuth.user?.role}
             </div>
