@@ -6,7 +6,7 @@ import { CiShoppingCart } from "react-icons/ci";
 import Slider from "react-slick";
 import axios from "axios";
 import { toast } from "react-hot-toast";
-import { Tabs } from "../../components/TabUnderLine";
+import { Tabs } from "../../components/TabUnderline";
 import { Button } from "@/components/ui/button";
 import TryOn from "@/components/TryOn";
 
@@ -67,9 +67,9 @@ const ProductDetail = () => {
     const colorDetail = product.stockDetails.find((detail) => detail.colorCode === color);
     if (colorDetail && colorDetail.imageLink) {
       setCurrentImage(colorDetail.imageLink);
-      setShowSlider(false); // Hide slider if specific image exists for the color abc
+      setShowSlider(false); // Hide slider if specific image exists for the color
     } else {
-      setShowSlider(true); // Show slider if no specific image exists for the color abcc
+      setShowSlider(true); // Show slider if no specific image exists for the color
     }
   };
 
