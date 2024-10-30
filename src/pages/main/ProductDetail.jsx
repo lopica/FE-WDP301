@@ -8,7 +8,7 @@ import axios from "axios";
 import { toast } from "react-hot-toast";
 import { Tabs } from "../../components/TabUnderline";
 import { Button } from "@/components/ui/button";
-import TryOn from "@/components/TryOn";
+// import TryOn from "@/components/TryOn";
 
 const ProductDetail = () => {
   const { id } = useParams();
@@ -218,9 +218,9 @@ const ProductDetail = () => {
                 )}
               </div>
             </div>
-            <div className="pt-10">
+            {/* <div className="pt-10">
               <TryOn />
-            </div>
+            </div> */}
           </div>
           <div className="flex-1">
             {/* ======= Product Title ======= */}

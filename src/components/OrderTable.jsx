@@ -2,9 +2,19 @@ import React, { useState } from "react";
 import { ArrowUpDown, ChevronLeft, ChevronRight, Eye, DollarSign, Receipt, Check, X, Truck } from "lucide-react";
 import axios from "axios";
 import { toast } from "react-hot-toast";
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from "@/components/ui/alert-dialog";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import ExportOrderToExcel from "./admin/ExportOrderToExcel ";
+// import ExportOrderToExcel from "./admin/ExportOrderToExcel ";
 
 const OrderTable = ({ orders }) => {
   const completedOrders = orders.filter((order) => order.orderStatus === "completed");
@@ -97,7 +107,10 @@ const OrderTable = ({ orders }) => {
     }
     return pageNumbers.map((number) => (
       <li key={number}>
-        <button onClick={() => paginate(number)} className={`px-3 py-1 border border-gray-300 rounded ${currentPage === number ? "bg-gray-200 text-gray-800 hover:bg-gray-300" : "bg-white text-gray-700 hover:bg-gray-50"}`}>
+        <button
+          onClick={() => paginate(number)}
+          className={`px-3 py-1 border border-gray-300 rounded ${currentPage === number ? "bg-gray-200 text-gray-800 hover:bg-gray-300" : "bg-white text-gray-700 hover:bg-gray-50"}`}
+        >
           {number}
         </button>
       </li>
@@ -107,7 +120,13 @@ const OrderTable = ({ orders }) => {
   return (
     <>
       <div className="flex items-center justify-between space-x-4 mb-4">
-        <input type="text" placeholder="Search by Order ID or Customer" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="px-4 py-2 border rounded-lg w-full sm:w-1/2 lg:w-1/3" />
+        <input
+          type="text"
+          placeholder="Search by Order ID or Customer"
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          className="px-4 py-2 border rounded-lg w-full sm:w-1/2 lg:w-1/3"
+        />
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
         <div className="bg-white shadow-sm rounded-lg p-4 flex flex-col justify-between">
@@ -151,9 +170,9 @@ const OrderTable = ({ orders }) => {
               </button>
             ))}
           </div>
-          <div className="col-span-3 flex justify-end">
+          {/* <div className="col-span-3 flex justify-end">
             <ExportOrderToExcel orders={orders} />
-          </div>
+          </div> */}
         </div>
         <table className="min-w-full table-auto mt-10">
           <thead>
@@ -183,12 +202,26 @@ const OrderTable = ({ orders }) => {
                 <td className="py-2 px-4">{new Date(order.createdAt).toLocaleString()}</td>
                 <td className="py-2 px-4">{order.shippingAddress.fullName}</td>
                 <td className="py-2 px-4">
-                  <span className={`shadow-sm px-2 py-1 rounded-full text-sm ${order.isPayment ? "bg-green-100 text-green-800" : "bg-orange-100 text-orange-800"}`}>{order.isPayment ? "Paid" : "Unpaid"}</span>
+                  <span className={`shadow-sm px-2 py-1 rounded-full text-sm ${order.isPayment ? "bg-green-100 text-green-800" : "bg-orange-100 text-orange-800"}`}>
+                    {order.isPayment ? "Paid" : "Unpaid"}
+                  </span>
                 </td>
                 <td className="py-2 px-4">{order.totalPrice}₫</td>
                 <td className="py-2 px-4">{order.orderItems.length} items</td>
                 <td className="py-2 px-4">
-                  <span className={`shadow-sm px-2 py-1 rounded-full text-sm ${order.orderStatus === "completed" ? "bg-green-100 text-green-800" : order.orderStatus === "cancelled" ? "bg-red-100 text-red-800" : order.orderStatus === "shipping" ? "bg-blue-100 text-blue-800" : "bg-orange-100 text-orange-800"}`}>{order.orderStatus.charAt(0).toUpperCase() + order.orderStatus.slice(1)}</span>
+                  <span
+                    className={`shadow-sm px-2 py-1 rounded-full text-sm ${
+                      order.orderStatus === "completed"
+                        ? "bg-green-100 text-green-800"
+                        : order.orderStatus === "cancelled"
+                        ? "bg-red-100 text-red-800"
+                        : order.orderStatus === "shipping"
+                        ? "bg-blue-100 text-blue-800"
+                        : "bg-orange-100 text-orange-800"
+                    }`}
+                  >
+                    {order.orderStatus.charAt(0).toUpperCase() + order.orderStatus.slice(1)}
+                  </span>
                 </td>
                 <td className="py-2 px-4">
                   <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
@@ -266,7 +299,10 @@ const OrderTable = ({ orders }) => {
                   {order.orderStatus === "pending" && (
                     <AlertDialog>
                       <AlertDialogTrigger asChild>
-                        <button className="ml-4 bg-white hover:bg-gray-50 text-blue-800 hover:text-blue-800 py-1 px-2 border border-gray-200 rounded shadow" onClick={() => handleStatusClick(order._id, "shipping")}>
+                        <button
+                          className="ml-4 bg-white hover:bg-gray-50 text-blue-800 hover:text-blue-800 py-1 px-2 border border-gray-200 rounded shadow"
+                          onClick={() => handleStatusClick(order._id, "shipping")}
+                        >
                           <Truck className="h-5 w-5 opacity-55 hover:opacity-85" />
                         </button>
                       </AlertDialogTrigger>
@@ -287,7 +323,10 @@ const OrderTable = ({ orders }) => {
                   {order.orderStatus === "shipping" && (
                     <AlertDialog>
                       <AlertDialogTrigger asChild>
-                        <button className="ml-4 bg-white hover:bg-gray-50 text-green-600 hover:text-green-900 py-1 px-2 border border-gray-200 rounded shadow" onClick={() => handleStatusClick(order._id, "completed")}>
+                        <button
+                          className="ml-4 bg-white hover:bg-gray-50 text-green-600 hover:text-green-900 py-1 px-2 border border-gray-200 rounded shadow"
+                          onClick={() => handleStatusClick(order._id, "completed")}
+                        >
                           <Check className="h-5 w-5 opacity-55 hover:opacity-85" />
                         </button>
                       </AlertDialogTrigger>
@@ -308,7 +347,10 @@ const OrderTable = ({ orders }) => {
                   {order.orderStatus !== "cancelled" && order.orderStatus !== "completed" && (
                     <AlertDialog>
                       <AlertDialogTrigger asChild>
-                        <button className="ml-4 bg-white hover:bg-gray-50 text-red-600 hover:text-red-900 py-1 px-2 border border-gray-200 rounded shadow" onClick={() => handleStatusClick(order._id, "cancelled")}>
+                        <button
+                          className="ml-4 bg-white hover:bg-gray-50 text-red-600 hover:text-red-900 py-1 px-2 border border-gray-200 rounded shadow"
+                          onClick={() => handleStatusClick(order._id, "cancelled")}
+                        >
                           <X className="h-5 w-5 opacity-55 hover:opacity-85" />
                         </button>
                       </AlertDialogTrigger>
@@ -361,7 +403,11 @@ const OrderTable = ({ orders }) => {
               </li>
               {renderPagination()}
               <li>
-                <button onClick={() => paginate(currentPage + 1)} className="ml-3 px-3 py-1 border border-gray-300 rounded bg-white text-gray-700 hover:bg-gray-50" disabled={currentPage === totalPages}>
+                <button
+                  onClick={() => paginate(currentPage + 1)}
+                  className="ml-3 px-3 py-1 border border-gray-300 rounded bg-white text-gray-700 hover:bg-gray-50"
+                  disabled={currentPage === totalPages}
+                >
                   <ChevronRight color="#a8a5a5" />
                 </button>
               </li>
