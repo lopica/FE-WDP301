@@ -67,9 +67,9 @@ const ProductDetail = () => {
     const colorDetail = product.stockDetails.find((detail) => detail.colorCode === color);
     if (colorDetail && colorDetail.imageLink) {
       setCurrentImage(colorDetail.imageLink);
-      setShowSlider(false); // Hide slider if specific image exists for the color abc
+      setShowSlider(false); // Hide slider if specific image exists for the color
     } else {
-      setShowSlider(true); // Show slider if no specific image exists for the color abcc
+      setShowSlider(true); // Show slider if no specific image exists for the color
     }
   };
 
