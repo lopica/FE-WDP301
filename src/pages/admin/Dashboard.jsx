@@ -9,7 +9,6 @@ import { Button } from "@/components/ui/button";
 import { Calendar } from "@/components/ui/calendar";
 import TopProductsSold from "../../components/admin/TopProductsSold";
 
-// Date Picker Component
 function DatePickerDemo({ date, setDate }) {
   return (
     <Popover>
@@ -31,7 +30,7 @@ const Dashboard = () => {
   const [usersData, setUsersData] = useState([]);
   const [productsData, setProductsData] = useState([]);
   const [depotProductsData, setDepotProductsData] = useState([]);
-  const [date, setDate] = useState(null); // State for selected date
+  const [date, setDate] = useState(null); 
   const [maxY, setMaxY] = useState(50);
   const [stepSize, setStepSize] = useState(2);
 
@@ -57,7 +56,7 @@ const Dashboard = () => {
     const fetchProducts = async () => {
       try {
         const response = await axios.get("http://localhost:9999/api/product/get-all-product");
-        setProductsData(response.data.products); // Assuming the response structure
+        setProductsData(response.data.products); 
       } catch (error) {
         console.error("Error fetching products data", error);
       }
