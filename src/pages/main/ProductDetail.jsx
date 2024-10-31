@@ -35,6 +35,8 @@ const ProductDetail = () => {
     fetchProduct();
   }, [id]);
 
+  useEffect(()=>{console.log(product)},[product])
+
   if (!product) {
     return <div>Loading...</div>;
   }
@@ -228,7 +230,7 @@ const ProductDetail = () => {
               <h1 className="text-3xl font-bold ">{product.title}</h1>
               <div className=" px-4 py-1 text-green-600 bg-green-100 rounded-md font-bold">{product.availabilityStatus}</div>
             </div>
-            <h2 className="mb-2 font-medium">{`${product.brand.name} ${product.type.name} for ${product.category.name}.`}</h2>
+            {/* <h2 className="mb-2 font-medium">{`${product.brand.name} ${product.type.name} for ${product.category.name}.`}</h2> */}
             {/* ======================================= rating ======================================= */}
             <div className="flex items-center mb-2">
               {[...Array(5)].map((_, i) => (product.rating > i ? <FaStar key={i} className="text-yellow-500" /> : <FaRegStar key={i} className="text-gray-300" />))}
@@ -402,26 +404,16 @@ const ProductDetail = () => {
           </div>
           <div className="mt-10">
             <h2 className="text-2xl font-bold mb-2">Product Description</h2>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum ipsa nulla, sequi, aspernatur itaque voluptatum soluta cum esse, iure fugiat deleniti officia sunt doloremque rem nemo
-              obcaecati vero distinctio accusantium!
-            </p>
             <p className="mt-2">{product.description}.</p>
             <div className="grid grid-cols-2 w-1/2 mt-5">
-              <div>
-                <p className="font-bold">Brand :</p>
-                <p className="font-bold mt-2">Category :</p>
-                <p className="font-bold mt-2">Type :</p>
-                <p className="font-bold mt-2">Tag :</p>
-              </div>
-              <div className="">
+              {/* <div className="">
                 <p>{product.brand.name}</p>
                 <p className="mt-2">{product.category.name}</p>
                 <p className="mt-2">{product.type.name}</p>
                 <div className="flex items-center space-x-2 mt-2">
                   <span className="inline-block bg-gray-200 text-gray-700 px-2 py-1 rounded-full text-xs">{product.tag?.name}</span>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

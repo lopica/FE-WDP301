@@ -74,6 +74,7 @@ function App() {
 
             <Route path="/men" element={<ProductList category="men" />} />
             <Route path="/women" element={<ProductList category="women" />} />
+            <Route path="/all-category" element={<ProductList category="" />} />
             <Route path="/login" element={!userAuth.accessToken ? <LoginPage /> : <Navigate to="/" />} />
             <Route path="/register" element={!userAuth.accessToken ? <RegisterPage /> : <Navigate to="/" />} />
             <Route path="/product/:id" element={<ProductDetail />} />

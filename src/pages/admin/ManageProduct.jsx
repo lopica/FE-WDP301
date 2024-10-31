@@ -15,13 +15,13 @@ const ManageProduct = () => {
     const fetchData = async () => {
       try {
         const resCategory = await axios.get("http://localhost:9999/api/category/get-all");
-        const resProduct = await axios.get("http://localhost:9999/api/product/get-all-product");
-        const resProductDepot = await axios.get("http://localhost:9999/api/depotProduct/get-all-product");
+        const resProduct = await axios.get("http://localhost:9999/api/product/get-all-product2");
+        // const resProductDepot = await axios.get("http://localhost:9999/api/depotProduct/get-all-product");
         const resTag = await axios.get("http://localhost:9999/api/tag/get-all");
-        const myProduct = resProduct.data.products;
+        const myProduct = resProduct.data;
         const myCategory = resCategory.data;
-        const myProductDepot = resProductDepot.data.productDepots;
-        setDepotData(myProductDepot);
+        // const myProductDepot = resProductDepot.data.productDepots;
+        // setDepotData(myProductDepot);
         setCategories(myCategory);
         setProducts(myProduct);
         setTags(resTag.data);
@@ -34,6 +34,10 @@ const ManageProduct = () => {
     };
     fetchData();
   }, []);
+
+  useEffect(()=>{
+    console.log(products)
+  }, [products])
 
   return (
     <div className="w-full h-full">
