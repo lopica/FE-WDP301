@@ -92,22 +92,6 @@ const ProductList = ({ category }) => {
   return (
     <div>
       <div className="container mx-auto p-6 flex">
-        <div className={`transition-transform duration-300 ease-in-out ${showSidebar ? "w-64" : "w-0"} overflow-hidden`}>
-          <Sidebar
-            selectedColors={selectedColors}
-            setSelectedColors={setSelectedColors}
-            selectedPrices={selectedPrices}
-            setSelectedPrices={setSelectedPrices}
-            selectedBrands={selectedBrands}
-            setSelectedBrands={setSelectedBrands}
-            selectedTags={selectedTags}
-            setSelectedTags={setSelectedTags}
-            selectedTypes={selectedTypes}
-            setSelectedTypes={setSelectedTypes}
-            priceRange={selectedPrices}
-            setPriceRange={setSelectedPrices}
-          />
-        </div>
         <div className="flex-1 ml-4">
           <div className="flex justify-between items-center mb-4">
             <div className="flex">
@@ -135,6 +119,23 @@ const ProductList = ({ category }) => {
               <ProductCard key={product._id} product={product} />
             ))}
           </div>
+        </div>
+
+        <div className={` ml-7 transition-transform duration-300 ease-in-out ${showSidebar ? "w-64" : "w-0"} overflow-hidden`}>
+          <Sidebar
+            selectedColors={selectedColors}
+            setSelectedColors={setSelectedColors}
+            selectedPrices={selectedPrices}
+            setSelectedPrices={setSelectedPrices}
+            selectedBrands={selectedBrands}
+            setSelectedBrands={setSelectedBrands}
+            selectedTags={selectedTags}
+            setSelectedTags={setSelectedTags}
+            selectedTypes={selectedTypes}
+            setSelectedTypes={setSelectedTypes}
+            priceRange={selectedPrices}
+            setPriceRange={setSelectedPrices}
+          />
         </div>
       </div>
     </div>
