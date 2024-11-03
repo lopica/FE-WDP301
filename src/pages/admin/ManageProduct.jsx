@@ -7,7 +7,7 @@ import axios from "axios";
 const ManageProduct = () => {
   const [categories, setCategories] = useState([]);
   const [products, setProducts] = useState([]);
-  const [depotData, setDepotData] = useState([]);
+  // const [depotData, setDepotData] = useState([]);
   const [tags, setTags] = useState([]);
 
   //get data from api
@@ -44,16 +44,16 @@ const ManageProduct = () => {
       <Tabs defaultValue="product">
         <TabsList>
           <TabsTrigger value="product">Products</TabsTrigger>
-          <TabsTrigger value="depot">Depot History</TabsTrigger>
+          {/* <TabsTrigger value="depot">Depot History</TabsTrigger> */}
         </TabsList>
         {/* product table */}
         <TabsContent value="product">
           <TableProduct productData={products} categories={categories} tags={tags} />
         </TabsContent>
         {/* product depot table */}
-        <TabsContent value="depot">
+        {/* <TabsContent value="depot">
           <TableDepot depotData={depotData} productData={products} />
-        </TabsContent>
+        </TabsContent> */}
       </Tabs>
     </div>
   );

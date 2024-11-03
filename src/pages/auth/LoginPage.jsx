@@ -8,13 +8,9 @@ import { UserContext } from "../../App"; // Import UserContext
 import { jwtDecode } from "jwt-decode";
 
 const LoginPage = () => {
-
   const googleAuth = () => {
-		window.open(
-			`http://localhost:9999/api/auth/google/callback`,
-			"_self"
-		);
-	};
+    window.open(`http://localhost:9999/api/auth/google/callback`, "_self");
+  };
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [rememberMe, setRememberMe] = useState(false); // Add state for Remember Me
@@ -33,10 +29,11 @@ const LoginPage = () => {
         productSelection: savedProductSelection,
       });
       if (response.status === 201) {
-        toast.success('Login successful');
+        toast.success("Login successful");
         const { access_token } = response.data;
 
         const user = jwtDecode(access_token);
+        console.log(jwtDecode(access_token));
         if (rememberMe) {
           localStorage.setItem("accessToken", access_token);
           localStorage.setItem("user", JSON.stringify(user));
@@ -50,6 +47,10 @@ const LoginPage = () => {
         // Clear the saved product selection after login
         localStorage.removeItem("productSelection");
         // Redirect to the product detail page if product selection is available
+        if (user.role === "admin") {
+          navigate("/admin/dashboard");
+          return;
+        }
         if (savedProductSelection) {
           const { productId, selectedColor, selectedSize, quantity } = savedProductSelection;
           navigate(`/product/${productId}`, { state: { selectedColor, selectedSize, quantity } });

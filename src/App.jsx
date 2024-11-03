@@ -72,9 +72,10 @@ function App() {
             <Route path="/order-success" element={<OrderSuccess />} />
             <Route path="/coming-soon" element={<ComingSoon />} />
 
-            <Route path="/men" element={<ProductList category="men" />} />
+            {/* <Route path="/men" element={<ProductList category="men" />} />
             <Route path="/women" element={<ProductList category="women" />} />
-            <Route path="/all-category" element={<ProductList category="" />} />
+            <Route path="/all-category" element={<ProductList category="" />} /> */}
+            <Route path="/:id" element={<ProductList />} />
             <Route path="/login" element={!userAuth.accessToken ? <LoginPage /> : <Navigate to="/" />} />
             <Route path="/register" element={!userAuth.accessToken ? <RegisterPage /> : <Navigate to="/" />} />
             <Route path="/product/:id" element={<ProductDetail />} />

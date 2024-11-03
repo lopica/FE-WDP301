@@ -194,11 +194,11 @@ const FormAddProduct = () => {
             </div>
             <div className="col-span-4 flex flex-col">
               <Label className="mb-2">Price</Label>
-              <Input type="number" value={price} onChange={(e) => setPrice(e.target.value)} readOnly />
+              <Input type="number" value={price} onChange={(e) => setPrice(e.target.value)}  />
             </div>
             <div className="col-span-4 flex flex-col">
               <Label className="mb-2">Stock</Label>
-              <Input type="number" value={stock} onChange={(e) => setStock(e.target.value)} readOnly />
+              <Input type="number" value={stock} onChange={(e) => setStock(e.target.value)}  />
             </div>
             {/* Row 2: Category, Tag, Type */}
             <div className="col-span-4 flex flex-col">

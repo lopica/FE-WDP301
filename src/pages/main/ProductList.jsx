@@ -2,8 +2,10 @@ import React, { useState, useEffect } from "react";
 import ProductCard from "../../components/ProductCard";
 import Sidebar from "../../components/SideBar";
 import axios from "axios";
+import { useParams } from "react-router-dom";
 
-const ProductList = ({ category }) => {
+const ProductList = () => {
+  const { id: categoryId } = useParams();
   const [products, setProducts] = useState([]);
   const [selectedColors, setSelectedColors] = useState([]);
   const [selectedPrices, setSelectedPrices] = useState([0, 1000000]);
@@ -12,47 +14,23 @@ const ProductList = ({ category }) => {
   const [selectedTypes, setSelectedTypes] = useState([]);
   const [showSidebar, setShowSidebar] = useState(true);
   const [sortOption, setSortOption] = useState("newest");
-  const [categories, setCategories] = useState([]);
   const [searchQuery, setSearchQuery] = useState(""); // Add state for search query
-
-  // Fetch categories
-  useEffect(() => {
-    const fetchCategories = async () => {
-      try {
-        const response = await axios.get("http://localhost:9999/api/category/get-all");
-        setCategories(response.data);
-      } catch (error) {
-        console.error("Error fetching categories:", error);
-      }
-    };
-    fetchCategories();
-  }, []);
 
   // Fetch products when category or categories change
   useEffect(() => {
     const fetchProducts = async () => {
       try {
         let response;
-        const lowerCaseCategory = category?.toLowerCase();
-        if (lowerCaseCategory === "all") {
-          response = await axios.get(`http://localhost:9999/api/product/get-all-product2`);
-          // console.log(response.data);
-        } else {
-          const categoryObj = categories.find((cat) => cat.name.toLowerCase() === lowerCaseCategory);
-          if (categoryObj) {
-            response = await axios.get(`http://localhost:9999/api/product/get-product-by-category-id/${categoryObj._id}`);
-          } else {
-            response = await axios.get(`http://localhost:9999/api/product/get-all-product2`);
-          }
-        }
+        // console.log(response.data);
+        response = await axios.get(`http://localhost:9999/api/product/get-all-product2`);
+        console.log(response.data);
         setProducts(response.data);
-        console.log(response.data)
       } catch (error) {
         console.error("Error fetching products:", error);
       }
     };
     fetchProducts();
-  }, [category, categories]);
+  }, []);
 
   const toggleSidebar = () => {
     setShowSidebar(!showSidebar);
@@ -76,7 +54,7 @@ const ProductList = ({ category }) => {
   };
 
   const filteredProducts = products.filter((product) => {
-    // const matchesCategory = product.category?.name?.toLowerCase() === category?.toLowerCase();
+    const matchesCategory = product.category === categoryId;
     const matchesColor = selectedColors.length === 0 || selectedColors.some((color) => product.stockDetails.some((detail) => detail.colorCode === color));
     const matchesPrice = product.price >= selectedPrices[0] && product.price <= selectedPrices[1];
     const matchesBrand = selectedBrands.length === 0 || selectedBrands.includes(product.brand);
@@ -84,9 +62,9 @@ const ProductList = ({ category }) => {
     const matchesType = selectedTypes.length === 0 || selectedTypes.includes(product.type);
     const matchesSearchQuery = product.title.toLowerCase().includes(searchQuery.toLowerCase());
     const matchesStatus = product.availabilityStatus?.toLowerCase() === "in stock";
-    return matchesColor && matchesPrice && matchesBrand && matchesType && matchesTag && matchesSearchQuery && matchesStatus;
+    return matchesCategory && matchesColor && matchesPrice && matchesBrand && matchesType && matchesTag && matchesSearchQuery && matchesStatus;
   });
-  console.log(filteredProducts)
+  console.log(filteredProducts);
   const sortedProducts = sortProducts(filteredProducts);
 
   return (
@@ -125,7 +103,7 @@ const ProductList = ({ category }) => {
             <input type="text" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} placeholder="Search by product title" className="bg-gray-200 p-2 rounded w-full" />
           </div>
           <h1 className="text-3xl font-bold mb-4">
-            {category.charAt(0).toUpperCase() + category.slice(1)} Products ({filteredProducts.length})
+            {/* {category.charAt(0).toUpperCase() + category.slice(1)} Products ({filteredProducts.length}) */}
           </h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {sortedProducts.map((product) => (

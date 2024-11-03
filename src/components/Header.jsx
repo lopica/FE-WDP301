@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import logo from "../assets/WEARIT.svg";
 import { Link, useNavigate } from "react-router-dom";
 import { CiUser, CiShoppingCart, CiHeart, CiLogout } from "react-icons/ci";
@@ -9,6 +9,7 @@ import { toast } from "react-hot-toast";
 
 const Header = () => {
   const { userAuth, setUserAuth } = useContext(UserContext);
+  const [categories, setCategories] = useState([]);
   const navigate = useNavigate();
 
   const handleLogout = async () => {
@@ -30,7 +31,7 @@ const Header = () => {
       toast.success("Logged out successfully");
       navigate("/");
     } catch (error) {
-      if (error.response?.data?.message === "Token is not valid. Forbidden!") {
+      if (error.response?.res?.message === "Token is not valid. Forbidden!") {
         sessionStorage.removeItem("accessToken");
         sessionStorage.removeItem("user");
         setUserAuth({ accessToken: null, user: null });
@@ -38,6 +39,14 @@ const Header = () => {
       toast.error(error.response?.data?.message || error.message);
     }
   };
+
+  useEffect(() => {
+    async function getAllCategories() {
+      const res = await axios.get("http://localhost:9999/api/category/get-all");
+      setCategories(res.data);
+    }
+    getAllCategories();
+  }, []);
 
   return (
     <header className="border-b shadow-md">
@@ -66,15 +75,23 @@ const Header = () => {
             <img src={logo} alt="brand logo" className="h-10 mr-5" />
           </Link>
           <nav>
-            <Link to="/men" className="mx-2 text-lg font-semibold">
+            {categories.map(
+              (cate, idx) =>
+                cate?.status && (
+                  <Link key={idx} to={`/${cate?._id}`} className="mx-2 text-lg font-semibold">
+                    {cate?.name}
+                  </Link>
+                ),
+            )}
+            {/* <Link to="/men" className="mx-2 text-lg font-semibold">
               Men
             </Link>
             <Link to="/women" className="mx-2 text-lg font-semibold">
               Women
-            </Link>
-            <Link to="/all-category" className="mx-2 text-lg font-semibold">
+            </Link> */}
+            {/* <Link to="/all-category" className="mx-2 text-lg font-semibold">
               All
-            </Link>
+            </Link> */}
           </nav>
         </div>
         <div className="flex items-center">
