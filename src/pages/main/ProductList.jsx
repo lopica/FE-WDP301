@@ -46,7 +46,7 @@ const ProductList = ({ category }) => {
           }
         }
         setProducts(response.data);
-        console.log(response.data)
+        console.log(response.data);
       } catch (error) {
         console.error("Error fetching products:", error);
       }
@@ -86,7 +86,7 @@ const ProductList = ({ category }) => {
     const matchesStatus = product.availabilityStatus?.toLowerCase() === "in stock";
     return matchesColor && matchesPrice && matchesBrand && matchesType && matchesTag && matchesSearchQuery && matchesStatus;
   });
-  console.log(filteredProducts)
+  console.log(filteredProducts);
   const sortedProducts = sortProducts(filteredProducts);
 
   return (
@@ -110,20 +110,23 @@ const ProductList = ({ category }) => {
         </div>
         <div className="flex-1 ml-4">
           <div className="flex justify-between items-center mb-4">
-            <button onClick={toggleSidebar} className="bg-gray-200 p-2 rounded">
-              {showSidebar ? "Hide Filters" : "Show Filters"}
-            </button>
-            <div className="relative">
-              <select value={sortOption} onChange={handleSortChange} className="bg-gray-200 p-2 rounded">
-                <option value="newest">Newest</option>
-                <option value="price-high-low">Price: High-Low</option>
-                <option value="price-low-high">Price: Low-High</option>
-              </select>
+            <div className="flex">
+              <button onClick={toggleSidebar} className="bg-gray-200 p-2 rounded mr-4" style={{ height: "40px" }}>
+                {showSidebar ? "Hide Filters" : "Show Filters"}
+              </button>
+              <div className="relative mb-4">
+                <select value={sortOption} onChange={handleSortChange} className="bg-gray-200 p-2 rounded">
+                  <option value="newest">Newest</option>
+                  <option value="price-high-low">Price: High-Low</option>
+                  <option value="price-low-high">Price: Low-High</option>
+                </select>
+              </div>
+            </div>
+            <div className="flex justify-between items-center mb-4 w-1/4">
+              <input type="text" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} placeholder="Search by product title" className="bg-gray-200 p-2 rounded w-full" />
             </div>
           </div>
-          <div className="flex justify-between items-center mb-4 w-1/4">
-            <input type="text" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} placeholder="Search by product title" className="bg-gray-200 p-2 rounded w-full" />
-          </div>
+
           <h1 className="text-3xl font-bold mb-4">
             {category.charAt(0).toUpperCase() + category.slice(1)} Products ({filteredProducts.length})
           </h1>
