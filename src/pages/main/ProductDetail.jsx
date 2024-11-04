@@ -21,6 +21,11 @@ const ProductDetail = () => {
   const [currentImage, setCurrentImage] = useState(null);
   const [showSlider, setShowSlider] = useState(true); // State to manage slider visibility
   const { userAuth, setUserAuth } = useContext(UserContext);
+  const [filteredReviews, setFilterReviews] = useState([]);
+  const [availableSizes, setAvailableSizes] = useState([]);
+  const [availableStock, setAvailableStock] = useState();
+  const [availableColors, setAvailableColors] = useState([]);
+
   const navigate = useNavigate();
   const shippingRate = 35000;
   useEffect(() => {
@@ -35,7 +40,23 @@ const ProductDetail = () => {
     fetchProduct();
   }, [id]);
 
-  useEffect(()=>{console.log(product)},[product])
+  useEffect(() => {
+    if (product) {
+      console.log(selectedColor)
+      setFilterReviews(filter ? product.reviews.filter((review) => review.rating === filter) : product.reviews);
+      setAvailableSizes(
+        selectedColor
+          ? product.stockDetails
+              .find((detail) => detail.colorCode === selectedColor)
+              ?.details.filter((d) => d.quantity > 0)
+              .map((d) => d.size)
+          : [],
+      );
+      setAvailableStock(selectedColor && selectedSize ? getStockForSelectedColorSize() : product.stock);
+      // Filter out colors that have no available stock in any size
+      setAvailableColors(product.stockDetails.filter((detail) => detail.details.some((sizeDetail) => sizeDetail.quantity > 0)));
+    }
+  }, [product, selectedColor]);
 
   if (!product) {
     return <div>Loading...</div>;
@@ -179,17 +200,6 @@ const ProductDetail = () => {
     const sizeDetail = colorDetails ? colorDetails.details.find((s) => s.size === selectedSize) : null;
     return sizeDetail ? sizeDetail.quantity : 0;
   };
-
-  const filteredReviews = filter ? product.reviews.filter((review) => review.rating === filter) : product.reviews;
-  const availableSizes = selectedColor
-    ? product.stockDetails
-        .find((detail) => detail.colorCode === selectedColor)
-        ?.details.filter((d) => d.quantity > 0)
-        .map((d) => d.size)
-    : [];
-  const availableStock = selectedColor && selectedSize ? getStockForSelectedColorSize() : product.stock;
-  // Filter out colors that have no available stock in any size
-  const availableColors = product.stockDetails.filter((detail) => detail.details.some((sizeDetail) => sizeDetail.quantity > 0));
 
   const formatCurrency = (value) => {
     return new Intl.NumberFormat("vi-VN", { style: "currency", currency: "VND" }).format(value);

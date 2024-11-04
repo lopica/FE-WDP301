@@ -22,7 +22,7 @@ const ProductList = () => {
       try {
         let response;
         // console.log(response.data);
-        response = await axios.get(`http://localhost:9999/api/product/get-all-product2`);
+        response = await axios.get(`http://localhost:9999/api/product/get-product-by-category-id/${categoryId}`);
         console.log(response.data);
         setProducts(response.data);
       } catch (error) {
@@ -30,7 +30,7 @@ const ProductList = () => {
       }
     };
     fetchProducts();
-  }, []);
+  }, [categoryId]);
 
   const toggleSidebar = () => {
     setShowSidebar(!showSidebar);
@@ -54,7 +54,7 @@ const ProductList = () => {
   };
 
   const filteredProducts = products.filter((product) => {
-    const matchesCategory = product.category === categoryId;
+    // const matchesCategory = product.category === categoryId;
     const matchesColor = selectedColors.length === 0 || selectedColors.some((color) => product.stockDetails.some((detail) => detail.colorCode === color));
     const matchesPrice = product.price >= selectedPrices[0] && product.price <= selectedPrices[1];
     const matchesBrand = selectedBrands.length === 0 || selectedBrands.includes(product.brand);
@@ -62,7 +62,13 @@ const ProductList = () => {
     const matchesType = selectedTypes.length === 0 || selectedTypes.includes(product.type);
     const matchesSearchQuery = product.title.toLowerCase().includes(searchQuery.toLowerCase());
     const matchesStatus = product.availabilityStatus?.toLowerCase() === "in stock";
-    return matchesCategory && matchesColor && matchesPrice && matchesBrand && matchesType && matchesTag && matchesSearchQuery && matchesStatus;
+    return matchesColor 
+    && matchesPrice 
+    && matchesBrand 
+    && matchesType 
+    && matchesTag 
+    && matchesSearchQuery 
+    && matchesStatus;
   });
   console.log(filteredProducts);
   const sortedProducts = sortProducts(filteredProducts);

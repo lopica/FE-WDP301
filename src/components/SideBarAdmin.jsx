@@ -87,7 +87,7 @@ const SideBarAdmin = () => {
               </AccordionItem>
               <AccordionItem value="settings">
                 <Link to="/admin/settings" className="flex items-center text-gray-700 hover:bg-gray-200 p-2 rounded font-medium">
-                  <Settings size={20} className="mr-3" /> Settings
+                  {/* <Settings size={20} className="mr-3" /> Settings */}
                 </Link>
               </AccordionItem>
               <AccordionItem value="pages">

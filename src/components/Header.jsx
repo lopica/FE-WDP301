@@ -5,6 +5,7 @@ import { CiUser, CiShoppingCart, CiHeart, CiLogout } from "react-icons/ci";
 import { AiOutlineDashboard } from "react-icons/ai";
 import { UserContext } from "../App";
 import axios from "axios";
+import { jwtDecode } from "jwt-decode";
 import { toast } from "react-hot-toast";
 
 const Header = () => {
@@ -46,6 +47,9 @@ const Header = () => {
       setCategories(res.data);
     }
     getAllCategories();
+    const user = sessionStorage.getItem('user') || localStorage.getItem('user') 
+    const accessToken = sessionStorage.getItem('accessToken') || localStorage.getItem('accessToken')
+    setUserAuth({ accessToken, user })
   }, []);
 
   return (
@@ -75,14 +79,11 @@ const Header = () => {
             <img src={logo} alt="brand logo" className="h-10 mr-5" />
           </Link>
           <nav>
-            {categories.map(
-              (cate, idx) =>
-                cate?.status && (
-                  <Link key={idx} to={`/${cate?._id}`} className="mx-2 text-lg font-semibold">
-                    {cate?.name}
-                  </Link>
-                ),
-            )}
+            {categories.map((cate, idx) => (
+              <Link key={idx} to={`/${cate?._id}`} className="mx-2 text-lg font-semibold">
+                {cate?.name}
+              </Link>
+            ))}
             {/* <Link to="/men" className="mx-2 text-lg font-semibold">
               Men
             </Link>
