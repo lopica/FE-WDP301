@@ -25,7 +25,7 @@ const ForgotPasswordPage = () => {
   };
 
   const handleBackToLogin = () => {
-    navigate("/login"); // Navigate to login page
+    navigate("/login");
   };
 
   return (
