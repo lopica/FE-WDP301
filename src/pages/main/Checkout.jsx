@@ -23,6 +23,7 @@ import addressData from "../../data/address.js";
 
 const Checkout = () => {
   const { state } = useLocation();
+  console.log(state)
   const { products, subtotal, shipping, total } = state || {};
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(true);

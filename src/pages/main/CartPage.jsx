@@ -17,6 +17,7 @@ const CartPage = () => {
     const fetchCart = async () => {
       try {
         const userId = userAuth?.user?.id;
+        console.log(userId)
         if (!userId) {
           toast.error("Please login to view your cart.");
           navigate("/login");

@@ -48,7 +48,7 @@ const LoginPage = () => {
         localStorage.removeItem("productSelection");
         // Redirect to the product detail page if product selection is available
         if (user.role === "admin") {
-          navigate("/admin/dashboard");
+          navigate("/");
           return;
         }
         if (savedProductSelection) {

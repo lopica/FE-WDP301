@@ -56,7 +56,7 @@ const ProductDetail = () => {
       // Filter out colors that have no available stock in any size
       setAvailableColors(product.stockDetails.filter((detail) => detail.details.some((sizeDetail) => sizeDetail.quantity > 0)));
     }
-  }, [product, selectedColor]);
+  }, [product, selectedColor, selectedSize]);
 
   if (!product) {
     return <div>Loading...</div>;
@@ -108,6 +108,7 @@ const ProductDetail = () => {
       return;
     }
     const totalPrice = quantity * product.price;
+    console.log(userAuth)
     const userId = userAuth?.user?.id;
     if (userId === undefined) {
       localStorage.setItem("productSelection", JSON.stringify({ productId: id, selectedColor, selectedSize, quantity }));
@@ -118,6 +119,7 @@ const ProductDetail = () => {
     const colorDetail = product.stockDetails.find((detail) => detail.colorCode === selectedColor);
     const thumbnail = colorDetail && colorDetail.imageLink ? colorDetail.imageLink : product.thumbnail;
     // console.log("Thumbnail to be used:", thumbnail); // Debugging line to verify thumbnail selection
+    console.log(product._id)
     const cartItem = {
       productTitle: product.title,
       productId: product._id,
@@ -149,6 +151,7 @@ const ProductDetail = () => {
   };
   const handleBuyNow = async () => {
     const userId = userAuth?.user?.id;
+    console.log(userAuth?.user)
     if (userId === undefined) {
       localStorage.setItem("productSelection", JSON.stringify({ productId: id, selectedColor, selectedSize, quantity }));
       toast.error("Please login to add items to your cart.");
