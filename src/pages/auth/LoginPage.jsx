@@ -4,7 +4,7 @@ import banner1 from "../../assets/banner.png";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-hot-toast";
-import { UserContext } from "../../App"; // Import UserContext
+import { UserContext } from "../../App";
 import { jwtDecode } from "jwt-decode";
 
 const LoginPage = () => {
@@ -13,7 +13,7 @@ const LoginPage = () => {
   };
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [rememberMe, setRememberMe] = useState(false); // Add state for Remember Me
+  const [rememberMe, setRememberMe] = useState(false);
   const navigate = useNavigate();
   const { setUserAuth } = useContext(UserContext); // Use setUserAuth from context
 

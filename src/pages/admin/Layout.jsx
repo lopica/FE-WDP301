@@ -12,7 +12,6 @@ const AdminLayout = () => {
   const [types, setTypes] = useState([]);
   const [tags, setTags] = useState([]);
 
-  //axios get all users and orders
 
   return (
     <div className="flex bg-[#F5F6FA]">

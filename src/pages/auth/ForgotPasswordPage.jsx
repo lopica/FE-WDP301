@@ -5,7 +5,7 @@ import { toast } from "react-hot-toast";
 
 const ForgotPasswordPage = () => {
   const [email, setEmail] = useState("");
-  const navigate = useNavigate(); // Use useNavigate for navigation
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -25,7 +25,7 @@ const ForgotPasswordPage = () => {
   };
 
   const handleBackToLogin = () => {
-    navigate("/login"); // Navigate to login page
+    navigate("/login");
   };
 
   return (
