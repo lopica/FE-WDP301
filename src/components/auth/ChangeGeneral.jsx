@@ -27,8 +27,9 @@ const ChangeGeneral = () => {
     try {
       const response = await axios.put(`http://localhost:9999/api/user/update-general-user/${userAuth.user.id}`, updatedUser);
 
-      if (response.status === 201) {
+      if (response.status === 200) {
         sessionStorage.setItem("user", JSON.stringify(response.data));
+        console.log(response.data)
         setUserAuth({ ...userAuth, user: response.data });
         toast.success("Updated successfully!");
         setIsEditing(false);

@@ -111,11 +111,11 @@ const SideBarAdmin = () => {
               </AccordionItem>
             </>
           )}
-          <AccordionItem value="github">
+          {/* <AccordionItem value="github">
             <a href="https://github.com/dnthchung/HolaWear" target="_blank" rel="noopener noreferrer" className="flex items-center text-gray-700 hover:bg-gray-200 p-2 rounded">
               <FaGithub className="mr-3" /> GitHub Repository
             </a>
-          </AccordionItem>
+          </AccordionItem> */}
         </Accordion>
       </div>
     </div>

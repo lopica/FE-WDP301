@@ -14,6 +14,7 @@ const CartPage = () => {
   const [selectedProducts, setSelectedProducts] = useState([]);
 
   useEffect(() => {
+    console.log(userAuth)
     const fetchCart = async () => {
       try {
         const userId = userAuth?.user?.id;

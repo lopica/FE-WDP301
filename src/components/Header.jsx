@@ -13,6 +13,11 @@ const Header = () => {
   const [categories, setCategories] = useState([]);
   const navigate = useNavigate();
 
+  useEffect(()=>{
+    console.log(userAuth)
+    console.log(userAuth.user?.email)
+  },[userAuth])
+
   const handleLogout = async () => {
     try {
       // await axios.post(
@@ -47,7 +52,7 @@ const Header = () => {
       setCategories(res.data);
     }
     getAllCategories();
-    const user = sessionStorage.getItem('user') || localStorage.getItem('user') 
+    const user = JSON.parse(sessionStorage.getItem('user')) || localStorage.getItem('user') 
     const accessToken = sessionStorage.getItem('accessToken') || localStorage.getItem('accessToken')
     setUserAuth({ accessToken, user })
   }, []);

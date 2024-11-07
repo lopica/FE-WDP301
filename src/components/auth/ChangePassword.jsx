@@ -30,7 +30,7 @@ const ChangePassword = () => {
         newPassword,
       });
 
-      if (response.status === 200) {
+      if (response.status === 201) {
         toast.success("Password changed successfully! ");
       } else if (response.status === 400) {
         toast.error(response.data.message);
