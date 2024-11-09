@@ -30,7 +30,7 @@ const Dashboard = () => {
   const [usersData, setUsersData] = useState([]);
   const [productsData, setProductsData] = useState([]);
   const [depotProductsData, setDepotProductsData] = useState([]);
-  const [date, setDate] = useState(null); 
+  const [date, setDate] = useState(null);
   const [maxY, setMaxY] = useState(50);
   const [stepSize, setStepSize] = useState(2);
 
@@ -56,7 +56,7 @@ const Dashboard = () => {
     const fetchProducts = async () => {
       try {
         const response = await axios.get("http://localhost:9999/api/product/get-all-product");
-        setProductsData(response.data.products); 
+        setProductsData(response.data);
       } catch (error) {
         console.error("Error fetching products data", error);
       }
@@ -65,7 +65,7 @@ const Dashboard = () => {
     const fetchDepotProducts = async () => {
       try {
         const response = await axios.get("http://localhost:9999/api/depotProduct/get-all-product");
-        setDepotProductsData(response.data.productDepots);
+        setDepotProductsData(response.data.productDepots || []);
       } catch (error) {
         console.error("Error fetching depot products data", error);
       }
