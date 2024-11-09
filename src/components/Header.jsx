@@ -13,10 +13,10 @@ const Header = () => {
   const [categories, setCategories] = useState([]);
   const navigate = useNavigate();
 
-  useEffect(()=>{
-    console.log(userAuth)
-    console.log(userAuth.user?.email)
-  },[userAuth])
+  useEffect(() => {
+    console.log(userAuth);
+    console.log(userAuth.user?.email);
+  }, [userAuth]);
 
   const handleLogout = async () => {
     try {
@@ -52,9 +52,9 @@ const Header = () => {
       setCategories(res.data);
     }
     getAllCategories();
-    const user = JSON.parse(sessionStorage.getItem('user')) || localStorage.getItem('user') 
-    const accessToken = sessionStorage.getItem('accessToken') || localStorage.getItem('accessToken')
-    setUserAuth({ accessToken, user })
+    const user = JSON.parse(sessionStorage.getItem("user")) || localStorage.getItem("user");
+    const accessToken = sessionStorage.getItem("accessToken") || localStorage.getItem("accessToken");
+    setUserAuth({ accessToken, user });
   }, []);
 
   return (
@@ -112,13 +112,13 @@ const Header = () => {
               {/* <span className="absolute top-0 right-0 -mt-1 -mr-1 bg-red-500 text-white rounded-full text-xs w-4 h-4 flex items-center justify-center">12</span> */}
             </Link>
           )}
-          {userAuth.user?.role === "user" && (
+          {/* {userAuth.user?.role === "user" && (
             <Link to="/wishlist" className="mr-4">
               <button className="bg-white hover:bg-gray-50 text-gray-800 py-1 px-2 border border-gray-200 rounded shadow" disabled={!userAuth.accessToken || userAuth.user?.role !== "user"}>
                 <CiHeart className="h-5 w-5 opacity-55 hover:opacity-85 text-black" />
               </button>
             </Link>
-          )}
+          )} */}
           {/* admin */}
           {(userAuth.user?.role === "admin" || userAuth.user?.role === "seller") && (
             <Link to="/admin/dashboard" className="mr-4">
