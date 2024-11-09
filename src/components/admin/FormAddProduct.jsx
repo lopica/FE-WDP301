@@ -50,6 +50,29 @@ const FormAddProduct = () => {
     fetchData();
   }, []);
 
+
+const uploadToCloudinary = async (file) => {
+    const formData = new FormData();
+    formData.append("file", file);
+    formData.append("upload_preset", "HolaWear"); // Đảm bảo upload preset đã tồn tại và cho phép unsigned upload
+    // Không cần truyền `cloud_name` vào `formData`
+
+    try {
+      const response = await axios.post(
+        `https://api.cloudinary.com/v1_1/dbssvosnt/image/upload`,
+        formData,
+        {
+          headers: { "Content-Type": "multipart/form-data" }
+        }
+      );
+      return response.data.secure_url;
+    } catch (error) {
+      console.error("Error uploading image to Cloudinary:", error);
+      toast.error("Failed to upload image.");
+      return null;
+    }
+};
+
   const handleImageChange = (index, type, value) => {
     const updatedImages = [...images];
     updatedImages[index][type] = value;
@@ -71,11 +94,14 @@ const FormAddProduct = () => {
     setThumbnail(updatedThumbnail);
   };
 
-  const handleFileChange = (e, index) => {
+  const handleFileChange = async (e, index) => {
     const file = e.target.files[0];
     if (file && file.type.startsWith("image/")) {
       if (file.size <= 5 * 1024 * 1024) {
-        handleImageChange(index, "file", file);
+        const imageUrl = await uploadToCloudinary(file);
+        if (imageUrl) {
+          handleImageChange(index, "url", imageUrl); // Lưu URL vào trạng thái thay vì file
+        }
         setErrorMessage("");
       } else {
         setErrorMessage("Only files smaller than 5MB are allowed.");
@@ -84,12 +110,16 @@ const FormAddProduct = () => {
       setErrorMessage("Only image files are allowed.");
     }
   };
+  
 
-  const handleThumbnailFileChange = (e) => {
+  const handleThumbnailFileChange = async (e) => {
     const file = e.target.files[0];
     if (file && file.type.startsWith("image/")) {
       if (file.size <= 5 * 1024 * 1024) {
-        handleThumbnailChange("file", file);
+        const thumbnailUrl = await uploadToCloudinary(file);
+        if (thumbnailUrl) {
+          handleThumbnailChange("url", thumbnailUrl); // Lưu URL vào trạng thái thay vì file
+        }
         setErrorMessage("");
       } else {
         setErrorMessage("Only files smaller than 5MB are allowed.");
@@ -98,6 +128,7 @@ const FormAddProduct = () => {
       setErrorMessage("Only image files are allowed.");
     }
   };
+  
 
   const imageAsDataUrl = (file) => {
     return new Promise((resolve, reject) => {
@@ -140,17 +171,7 @@ const FormAddProduct = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    const base64Thumbnail = thumbnail.file ? await imageAsDataUrl(thumbnail.file) : thumbnail.url;
-    const base64Images = await Promise.all(images.map(async (image) => (image.file ? await imageAsDataUrl(image.file) : image.url)));
-
-    // Validate image URLs
-    const validUrls = await Promise.all(base64Images.map((url) => validateImageUrl(url)));
-    if (validUrls.includes(false)) {
-      setErrorMessage("One or more image URLs are invalid.");
-      return;
-    }
-
+  
     const productData = {
       title,
       description,
@@ -161,10 +182,10 @@ const FormAddProduct = () => {
       tag,
       brand,
       availabilityStatus,
-      images: base64Images,
-      thumbnail: base64Thumbnail,
+      images: images.map((image) => image.url), // Lấy URL của từng ảnh
+      thumbnail: thumbnail.url, // Lấy URL của thumbnail
     };
-
+  
     console.log("Submitting product data:", productData);
     try {
       const response = await axios.post("http://localhost:9999/api/product/create", productData, {
@@ -181,6 +202,7 @@ const FormAddProduct = () => {
       toast.error("Failed to add product.");
     }
   };
+  
 
   return (
     <div className="border-t-2">
@@ -194,11 +216,11 @@ const FormAddProduct = () => {
             </div>
             <div className="col-span-4 flex flex-col">
               <Label className="mb-2">Price</Label>
-              <Input type="number" value={price} onChange={(e) => setPrice(e.target.value)}  />
+              <Input type="number" value={price} onChange={(e) => setPrice(e.target.value)} readOnly />
             </div>
             <div className="col-span-4 flex flex-col">
               <Label className="mb-2">Stock</Label>
-              <Input type="number" value={stock} onChange={(e) => setStock(e.target.value)}  />
+              <Input type="number" value={stock} onChange={(e) => setStock(e.target.value)} readOnly />
             </div>
             {/* Row 2: Category, Tag, Type */}
             <div className="col-span-4 flex flex-col">

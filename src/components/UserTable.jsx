@@ -26,6 +26,7 @@ const UserTable = () => {
       const updatedUser = response.data;
       const updatedUsers = users.map((user) => (user.id === userId ? { ...user, status: updatedUser.userFound.status } : user));
       setUsers(updatedUsers);
+      window.location.reload();
     } catch (error) {
       console.error("Error updating user status:", error);
     }
@@ -213,7 +214,7 @@ const UserTable = () => {
                   </button>
                 </td>
                 <td>
-                  <button onClick={() => onEdit(user.id)} className="ml-4 bg-white hover:bg-gray-50 text-indigo-600 hover:text-indigo-900 py-1 px-2 border border-gray-200 rounded shadow">
+                  <button onClick={() => onEdit(user._id)} className="ml-4 bg-white hover:bg-gray-50 text-indigo-600 hover:text-indigo-900 py-1 px-2 border border-gray-200 rounded shadow">
                     {user.status === true ? "Active" : "InActive"}
                   </button>
                 </td>
